@@ -1,0 +1,101 @@
+services:
+    domstor.template.block.home.employee.service:
+        class: '%domstor.template.block_home.class%'
+        arguments:
+            - domstor.template.block.home.employee.service
+            - '@templating'
+        calls:
+            - [setBlockContentProvider, ['@app.repository.employee']]
+            - [setTemplate, ['%domstor.template.block.home.employee.template%']]
+        tags:
+            - { name: sonata.block }
+            
+    domstor.template.block.home.partner.service:
+        class: '%domstor.template.block_home.class%'
+        arguments:
+            - domstor.template.block.home.partner.service
+            - '@templating'
+        calls:
+            - [setBlockContentProvider, ['@app.repository.partner']]
+            - [setTemplate, ['%domstor.template.block.home.partner.template%']]
+        tags:
+            - { name: sonata.block }
+            
+    domstor.template.block.home.post.service:
+        class: '%domstor.template.block_home.class%'
+        arguments:
+            - domstor.template.block.home.post.service
+            - '@templating'
+        calls:
+            - [setBlockContentProvider, ['@app.repository.post']]
+            - [setTemplate, ['%domstor.template.block.home.post.template%']]
+        tags:
+            - { name: sonata.block }
+            
+    domstor.template.block.home.review.service:
+        class: '%domstor.template.block_home.class%'
+        arguments:
+            - domstor.template.block.home.review.service
+            - '@templating'
+        calls:
+            - [setBlockContentProvider, ['@app.repository.review']]
+            - [setTemplate, ['%domstor.template.block.home.review.template%']]
+        tags:
+            - { name: sonata.block }
+            
+    domstor.template.block.home.slider.service:
+        class: '%domstor.template.block_home.class%'
+        arguments:
+            - domstor.template.block.home.slider.service
+            - '@templating'
+        calls:
+            - [setBlockContentProvider, ['@app.repository.slider']]
+            - [setTemplate, ['%domstor.template.block.home.slider.template%']]
+        tags:
+            - { name: sonata.block }
+            
+    domstor.template.block.home.special_offer.service:
+        class: '%domstor.template.block_home.class%'
+        arguments:
+            - domstor.template.block.home.special_offer.service
+            - '@templating'
+        calls:
+            - [setBlockContentProvider, ['@app.repository.special_offer']]
+            - [setTemplate, ['%domstor.template.block.home.special_offer.template%']]
+        tags:
+            - { name: sonata.block }
+            
+    domstor.template.block.home.urgent_sale.service:
+        class: '%domstor.template.block_home.class%'
+        arguments:
+            - domstor.template.block.home.urgent_sale.service
+            - '@templating'
+        calls:
+            - [setBlockContentProvider, ['@app.repository.urgent_sale']]
+            - [setTemplate, ['%domstor.template.block.home.urgent_sale.template%']]
+        tags:
+            - { name: sonata.block }
+            
+    domstor.template.block.home.vacancy.service:
+        class: '%domstor.template.block_home.class%'
+        arguments:
+            - domstor.template.block.home.vacancy.service
+            - '@templating'
+        calls:
+            - [setBlockContentProvider, ['@app.repository.vacancy']]
+            - [setTemplate, ['%domstor.template.block.home.vacancy.template%']]
+        tags:
+            - { name: sonata.block }
+            
+    domstor.template.block.realtyicons.service:
+        class: '%domstor.template.block.realtyicons.class%'
+        arguments:
+            - domstor.template.block.realtyicons.service
+            - '@templating'
+        calls:
+            - [setOrgId, [13]]
+            - [setLocationId, [2004]]
+            - [setTemplate, ['%domstor.template.block.realtyicons.template%']]
+            - [setCacheDir, ['%kernel.cache_dir%']]
+        tags:
+            - { name: sonata.block }

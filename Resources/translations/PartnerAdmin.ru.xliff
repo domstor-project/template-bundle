@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="ru" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="form.label_name">
+                <source>form.label_name</source>
+                <target>Название</target>
+            </trans-unit>
+            <trans-unit id="form.label_sorting">
+                <source>form.label_sorting</source>
+                <target>Сортировка</target>
+            </trans-unit>
+            <trans-unit id="form.label_image">
+                <source>form.label_image</source>
+                <target>Логотип</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_partner_list">
+                <source>breadcrumb.link_partner_list</source>
+                <target>Список партнеров</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_partner_create">
+                <source>breadcrumb.link_partner_create</source>
+                <target>Добавить партнера</target>
+            </trans-unit>
+            <trans-unit id="list.label_name">
+                <source>list.label_name</source>
+                <target>Название</target>
+            </trans-unit>
+            <trans-unit id="list.label_sorting">
+                <source>list.label_sorting</source>
+                <target>Сортировка</target>
+            </trans-unit>
+            <trans-unit id="list.label_image">
+                <source>list.label_image</source>
+                <target>Логотип</target>
+            </trans-unit>
+            <trans-unit id="list.label_id">
+                <source>list.label_id</source>
+                <target>ID</target>
+            </trans-unit>
+            <trans-unit id="partner">
+                <source>partner</source>
+                <target>Партнеры</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

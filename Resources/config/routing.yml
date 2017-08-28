@@ -1,0 +1,9 @@
+#Bugfix sonata core problem translationBundle is null
+sonata_media_gallery_index:
+    path: /
+    
+sonata_media_gallery_view:
+    path: /
+    
+sonata_media_view:
+    path: /

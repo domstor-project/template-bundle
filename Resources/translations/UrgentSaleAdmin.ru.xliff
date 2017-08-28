@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="ru" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="form.label_address">
+                <source>form.label_address</source>
+                <target>Адрес</target>
+            </trans-unit>
+            <trans-unit id="form.label_text">
+                <source>form.label_text</source>
+                <target>Текст</target>
+            </trans-unit>
+            <trans-unit id="form.label_price">
+                <source>form.label_price</source>
+                <target>Цена</target>
+            </trans-unit>
+            <trans-unit id="form.label_phone">
+                <source>form.label_phone</source>
+                <target>Контактный телефон</target>
+            </trans-unit>
+            <trans-unit id="form.label_sorting">
+                <source>form.label_sorting</source>
+                <target>Сортировка</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_urgent_sale_list">
+                <source>breadcrumb.link_urgent_sale_list</source>
+                <target>Список срочных продаж</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_urgent_sale_create">
+                <source>breadcrumb.link_urgent_sale_create</source>
+                <target>Добавить срочную продажу</target>
+            </trans-unit>
+            <trans-unit id="list.label_address">
+                <source>list.label_address</source>
+                <target>Адрес</target>
+            </trans-unit>
+            <trans-unit id="list.label_price">
+                <source>list.label_price</source>
+                <target>Цена</target>
+            </trans-unit>
+            <trans-unit id="list.label_phone">
+                <source>list.label_phone</source>
+                <target>Контактный телефон</target>
+            </trans-unit>
+            <trans-unit id="list.label_sorting">
+                <source>list.label_sorting</source>
+                <target>Сортировка</target>
+            </trans-unit>
+            <trans-unit id="list.label_id">
+                <source>list.label_id</source>
+                <target>ID</target>
+            </trans-unit>
+            <trans-unit id="urgent sale">
+                <source>urgent sale</source>
+                <target>Срочная продажа</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

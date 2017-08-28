@@ -1,0 +1,17 @@
+<div class="reviews_home">
+    <div class="reviews">
+        <h3>Отзывы</h3>
+        <a id="reviews_prev" class="jcarousel_reviews-prev" href="#" data-target="#" title="Предыдущий отзыв"></a><a id="reviews_next" class="jcarousel_reviews-next" href="#" data-target="#" title="Следующий отзыв"></a>
+        <div class="jcarousel_reviews">
+            <div id="reviews" class="owl-carousel">
+                {% for row in rows %}
+                    <div class="review">
+                        <p>{{ row.text }}</p>
+                        <p class="data">{{ row.reviewDate|date('d.m.Y') }}</p>
+                        <p class="signature">{{ row.author }}</p>
+                    </div>                               
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

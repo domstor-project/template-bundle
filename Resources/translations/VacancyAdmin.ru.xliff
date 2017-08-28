@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="ru" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="form.label_title">
+                <source>form.label_title</source>
+                <target>Название</target>
+            </trans-unit>
+            <trans-unit id="form.label_place">
+                <source>form.label_place</source>
+                <target>Отдел</target>
+            </trans-unit>
+            <trans-unit id="form.label_salary">
+                <source>form.label_salary</source>
+                <target>Заработная плата</target>
+            </trans-unit>
+            <trans-unit id="form.label_sorting">
+                <source>form.label_sorting</source>
+                <target>Сортировка</target>
+            </trans-unit>
+            <trans-unit id="form.label_phone">
+                <source>form.label_phone</source>
+                <target>Контактный телефон</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_vacancy_list">
+                <source>breadcrumb.link_vacancy_list</source>
+                <target>Список вакансий</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_vacancy_create">
+                <source>breadcrumb.link_vacancy_create</source>
+                <target>Добавить вакансию</target>
+            </trans-unit>
+            <trans-unit id="list.label_title">
+                <source>list.label_title</source>
+                <target>Название</target>
+            </trans-unit>
+            <trans-unit id="list.label_salary">
+                <source>list.label_salary</source>
+                <target>Заработная плата</target>
+            </trans-unit>
+            <trans-unit id="list.label_place">
+                <source>list.label_place</source>
+                <target>Отдел</target>
+            </trans-unit>
+            <trans-unit id="list.label_phone">
+                <source>list.label_phone</source>
+                <target>Контактный телефон</target>
+            </trans-unit>
+            <trans-unit id="list.label_sorting">
+                <source>list.label_sorting</source>
+                <target>Сортировка</target>
+            </trans-unit>
+            <trans-unit id="list.label_id">
+                <source>list.label_id</source>
+                <target>ID</target>
+            </trans-unit>
+            <trans-unit id="vacancy">
+                <source>vacancy</source>
+                <target>Вакансии</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

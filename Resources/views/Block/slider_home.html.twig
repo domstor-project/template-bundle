@@ -1,0 +1,9 @@
+<div class="slider">
+    <div class="bxslider">
+        {% for row in rows %}
+            <div class="item" style="background: url({% if row.image %}{% path row.image, 'slider_home' %}{%endif%}) no-repeat 50% 0;">
+            {{ row.content|raw }}
+            </div>
+        {% endfor %}
+    </div>
+</div>

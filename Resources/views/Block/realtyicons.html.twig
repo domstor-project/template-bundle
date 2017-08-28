@@ -1,0 +1,39 @@
+<div class="realt_icons">
+    <div class="realt_icons_content">
+        <ul class="dropdown">
+            {#<li class="commerce">
+                <a id="icon-commerce" href="" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Коммерческая<br /> недвижимость</a>
+                <ul class="dropdown-menu" aria-labelledby="icon-commerce">
+                    <li><a href="1">Продают (46764)</a></li>
+                    <li><a href="2">Купят (452)</a></li>
+                    <li><a href="3">Сдают (883)</a></li>
+                    <li><a href="4">Снимут (442)</a></li>
+                </ul>
+            </li>#}
+            {% for obj, actions in countsLiv %}
+                {% if actions is not empty %}                
+                <li class="{{ obj }}">
+                    <a id="icon-{{ obj }}" href="" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ tp.typehtml(obj)|raw }}</a>
+                    <ul class="dropdown-menu" aria-labelledby="icon-{{ obj }}">
+                    {% for act, count in actions %}
+                        <li><a href="{{ path('app_objects_list', {object: obj, action: act}) }}">{{ tp.action(act) }} ({{ count }})</a></li>
+                    {% endfor %}
+                    </ul>
+                </li>
+                {% endif %}
+            {% endfor %}            
+            {% for obj, actions in countsCom %}
+                {% if actions is not empty %}                
+                <li class="{{ obj }}">
+                    <a id="icon-{{ obj }}" href="" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Коммерческая<br>недвижимость</a>
+                    <ul class="dropdown-menu" aria-labelledby="icon-{{ obj }}">
+                    {% for act, count in actions %}
+                        <li><a href="{{ path('app_objects_list', {object: obj, action: act}) }}">{{ tp.action(act) }} ({{ count }})</a></li>
+                    {% endfor %}
+                    </ul>
+                </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</div>

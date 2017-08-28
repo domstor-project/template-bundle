@@ -1,0 +1,12 @@
+<div class="news_home">
+    <div class="news_content">
+        {% block headnews %}<h3>Новости</h3>{% endblock %}
+        {% for row in rows %}
+            <div class="news_block"><!-- Блок новости -->
+                <p><a href="{{ path('app_news_show', {id: row.id}) }}">{{ row.content|raw }}</a></p>
+                <p class="data">{{ row.publicationDateStart|date('m.d.Y') }}</p>
+            </div>
+        {% endfor %}
+        <p class="archive_news"><a href="{{ url('app_news_list') }}"><span></span>Архив новостей</a></p>
+    </div>
+</div>

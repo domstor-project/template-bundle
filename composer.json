@@ -1,0 +1,42 @@
+{
+    "name": "domstor-project/template-bundle",
+    "description": "Template bundle for client sites",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmitry Anikeev",
+            "email": "anikeev.dmitry@outlook.com"
+        },
+        {
+            "name": "Domstor LLC",
+            "homepage": "https://github.com/domstor-project"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Domstor\\TemplateBundle\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "config": {
+         "sort-packages": true,
+         "cache-dir": ".composer"
+    },
+    "require": {
+        "php": "^7.1",
+        "sonata-project/admin-bundle":"^3.1",
+        "sonata-project/media-bundle": "^3.5",
+        "sonata-project/formatter-bundle":"^3.0",
+        "sonata-project/intl-bundle": "^2.3",
+        "sonata-project/doctrine-orm-admin-bundle": "^3.1",
+        "knplabs/knp-paginator-bundle": "^2.6",
+        "friendsofsymfony/user-bundle": "^2.0"
+    },
+    "require-dev": {
+        "franzl/studio": "0.11.2",
+        "doctrine/orm": "^2.5"
+    }
+}

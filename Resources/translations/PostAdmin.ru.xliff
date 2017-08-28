@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="ru" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="form.label_title">
+                <source>form.label_title</source>
+                <target>Заголовок</target>
+            </trans-unit>
+            <trans-unit id="form.label_content">
+                <source>form.label_content</source>
+                <target>Текст</target>
+            </trans-unit>
+            <trans-unit id="form.label_enabled">
+                <source>form.label_enabled</source>
+                <target>Отображается</target>
+            </trans-unit>
+            <trans-unit id="form.label_image">
+                <source>form.label_image</source>
+                <target>Изображение</target>
+            </trans-unit>
+            <trans-unit id="form.label_publication_date_start">
+                <source>form.label_publication_date_start</source>
+                <target>Дата публикации</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_post_list ">
+                <source>breadcrumb.link_post_list</source>
+                <target>Список новостей</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_post_create">
+                <source>breadcrumb.link_post_create</source>
+                <target>Добавить новость</target>
+            </trans-unit>
+            <trans-unit id="list.label_title">
+                <source>list.label_title</source>
+                <target>Заголовок</target>
+            </trans-unit>
+            <trans-unit id="list.label_publication_date_start">
+                <source>list.label_publication_date_start</source>
+                <target>Дата публикации</target>
+            </trans-unit>
+            <trans-unit id="list.label_enabled">
+                <source>list.label_enabled</source>
+                <target>Отображается</target>
+            </trans-unit>
+            <trans-unit id="list.label_id">
+                <source>list.label_id</source>
+                <target>ID</target>
+            </trans-unit>
+            <trans-unit id="posts">
+                <source>posts</source>
+                <target>Новости</target>
+            </trans-unit>
+            <trans-unit id="group_status">
+                <source>group_status</source>
+                <target>Настройки</target>
+            </trans-unit>
+            <trans-unit id="group_post">
+                <source>group_post</source>
+                <target>Новость</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

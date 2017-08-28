@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xsi="http://www.w3.org/2001/XMLSchema-instance" schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+    <mapped-superclass name="Domstor\TemplateBundle\Entity\BaseSlider">
+        <unique-constraints>
+            <unique-constraint columns="sorting" name="sorting_idx"/>
+        </unique-constraints>
+        <id name="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+        <one-to-one field="image" target-entity="Sonata\MediaBundle\Model\MediaInterface">
+            <join-column name="image_id" referenced-column-name="id" />
+        </one-to-one>
+        <field name="content" type="text" column="content" nullable="false"/>
+        <field name="rawContent" type="text" column="raw_content" nullable="false"/>
+        <field name="contentFormatter" type="string" column="content_formatter" nullable="false"/>
+        <field name="sorting" type="integer" column="sorting" nullable="false"/>
+        <field name="createdAt" type="datetime" column="created_at" nullable="false"/>
+        <field name="updatedAt" type="datetime" column="updated_at" nullable="false"/>
+        <lifecycle-callbacks>
+            <lifecycle-callback type="prePersist" method="prePersist"/>
+            <lifecycle-callback type="preUpdate" method="preUpdate"/>
+        </lifecycle-callbacks>
+    </mapped-superclass>
+</doctrine-mapping>

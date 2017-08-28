@@ -1,0 +1,13 @@
+<div class="vacancy_home">
+    <div class="vacancy_content">
+        <h3>Вакансии</h3>
+        {% for row in rows %}
+        <div class="vacancy_block">
+            <h4>{{ row.title }}</h4>
+            <p>{{ row.place }}</p>
+            <p><strong>З/п от 30 000 рублей</strong></p>
+            <p><strong>{{ row.phone }}</strong></p>
+        </div>
+        {% endfor %}
+    </div>
+</div>

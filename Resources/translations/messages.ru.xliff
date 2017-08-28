@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="ru" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="media">
+                <source>media</source>
+                <target>Медиа</target>
+            </trans-unit>
+            <trans-unit id="gallery">
+                <source>gallery</source>
+                <target>Галереи</target>
+            </trans-unit>
+            <trans-unit id="employee">
+                <source>employee</source>
+                <target>Сотрудники</target>
+            </trans-unit>
+            <trans-unit id="vacancy">
+                <source>vacancy</source>
+                <target>Вакансии</target>
+            </trans-unit>
+            <trans-unit id="partner">
+                <source>partner</source>
+                <target>Партнеры</target>
+            </trans-unit>
+            <trans-unit id="posts">
+                <source>posts</source>
+                <target>Новости</target>
+            </trans-unit>
+            <trans-unit id="slider">
+                <source>slider</source>
+                <target>Слайдер</target>
+            </trans-unit>
+            <trans-unit id="review">
+                <source>review</source>
+                <target>Отзывы</target>
+            </trans-unit>
+            <trans-unit id="special offer">
+                <source>special offer</source>
+                <target>Специальные предложения</target>
+            </trans-unit>
+            <trans-unit id="special_offer">
+                <source>special_offer</source>
+                <target>Специальные предложения</target>
+            </trans-unit>
+            <trans-unit id="urgent sale">
+                <source>urgent sale</source>
+                <target>Срочная продажа</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

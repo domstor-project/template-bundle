@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="ru" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="form.label_review_date">
+                <source>form.label_review_date</source>
+                <target>Дата написания отзыва</target>
+            </trans-unit>
+            <trans-unit id="form.label_author">
+                <source>form.label_author</source>
+                <target>Автор отзыва</target>
+            </trans-unit>
+            <trans-unit id="form.label_text">
+                <source>form.label_text</source>
+                <target>Текст отзыва</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_review_list">
+                <source>breadcrumb.link_review_list</source>
+                <target>Список отзывов</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_review_create">
+                <source>breadcrumb.link_review_create</source>
+                <target>Добавить отзыв</target>
+            </trans-unit>
+            <trans-unit id="list.label_review_date">
+                <source>list.label_review_date</source>
+                <target>Дата написания отзыва</target>
+            </trans-unit>
+            <trans-unit id="list.label_author">
+                <source>list.label_author</source>
+                <target>Автор отзыва</target>
+            </trans-unit>
+            <trans-unit id="list.label_id">
+                <source>list.label_id</source>
+                <target>ID</target>
+            </trans-unit>
+            <trans-unit id="review">
+                <source>review</source>
+                <target>Отзывы</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

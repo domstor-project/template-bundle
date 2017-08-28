@@ -1,0 +1,15 @@
+<div class="{{ template_name }}_home">
+    <div class="{{ template_name }}_block">
+        <h3>{% block template_title %}{% endblock %}</h3>
+        <a id="{{ template_name }}_prev" class="jcarousel_{{ template_name }}-prev" href="#" data-target="#" title="Предыдущее предложение"></a><a id="{{ template_name }}_next" class="jcarousel_{{ template_name }}-next" href="#" data-target="#" title="Следующее предложение"></a>
+        <div class="jcarousel_{{ template_name }}">
+            <div id="{{ template_name }}" class="owl-carousel">
+                {% for row in rows %}
+                    <div class="{{ template_name }}">
+                        {% block row_content %}{% endblock %}
+                    </div>                                 
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

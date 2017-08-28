@@ -1,0 +1,44 @@
+parameters:
+    domstor.template.admin.employee.class: Domstor\TemplateBundle\Admin\EmployeeAdmin
+    domstor.template.admin.employee.translation_domain: EmployeeAdmin
+    domstor.template.employee.entity: Domstor\TemplateBundle\Entity\BaseEmployee
+    domstor.template.admin.partner.class: Domstor\TemplateBundle\Admin\PartnerAdmin
+    domstor.template.admin.partner.translation_domain: PartnerAdmin
+    domstor.template.partner.entity: Domstor\TemplateBundle\Entity\BasePartner
+    domstor.template.admin.post.class: Domstor\TemplateBundle\Admin\PostAdmin
+    domstor.template.admin.post.translation_domain: PostAdmin
+    domstor.template.post.entity: Domstor\TemplateBundle\Entity\BasePost
+    domstor.template.admin.slider.class: Domstor\TemplateBundle\Admin\SliderAdmin
+    domstor.template.admin.slider.translation_domain: SliderAdmin
+    domstor.template.slider.entity: Domstor\TemplateBundle\Entity\BaseSlider
+    domstor.template.admin.review.class: Domstor\TemplateBundle\Admin\ReviewAdmin
+    domstor.template.admin.review.translation_domain: ReviewAdmin
+    domstor.template.review.entity: Domstor\TemplateBundle\Entity\BaseReview
+    domstor.template.admin.special_offer.class: Domstor\TemplateBundle\Admin\SpecialOfferAdmin
+    domstor.template.admin.special_offer.translation_domain: SpecialOfferAdmin
+    domstor.template.special_offer.entity: Domstor\TemplateBundle\Entity\BaseSpecialOffer
+    domstor.template.admin.urgent_sale.class: Domstor\TemplateBundle\Admin\UrgentSaleAdmin
+    domstor.template.admin.urgent_sale.translation_domain: UrgentSaleAdmin
+    domstor.template.urgent_sale.entity: Domstor\TemplateBundle\Entity\BaseUrgentSale
+    domstor.template.admin.vacancy.class: Domstor\TemplateBundle\Admin\VacancyAdmin
+    domstor.template.admin.vacancy.translation_domain: VacancyAdmin
+    domstor.template.vacancy.entity: Domstor\TemplateBundle\Entity\BaseVacancy
+    
+    domstor.template.block_home.class: Domstor\TemplateBundle\Block\Service\HomeBlock
+    domstor.template.block.home.employee.template: 'DomstorTemplateBundle:Block:employee_home.html.twig'
+    domstor.template.block.home.partner.template: 'DomstorTemplateBundle:Block:partner_home.html.twig'
+    domstor.template.block.home.post.template: 'DomstorTemplateBundle:Block:post_home.html.twig'
+    domstor.template.block.home.review.template: 'DomstorTemplateBundle:Block:review_home.html.twig'
+    domstor.template.block.home.slider.template: 'DomstorTemplateBundle:Block:slider_home.html.twig'
+    domstor.template.block.home.special_offer.template: 'DomstorTemplateBundle:Block:special_home.html.twig'
+    domstor.template.block.home.urgent_sale.template: 'DomstorTemplateBundle:Block:urgent_home.html.twig'
+    domstor.template.block.home.vacancy.template: 'DomstorTemplateBundle:Block:vacancy_home.html.twig'
+    
+    domstor.template.block.realtyicons.class: Domstor\TemplateBundle\Block\Service\RealtyIconsBlock
+    domstor.template.block.realtyicons.template: 'DomstorTemplateBundle:Block:realtyicons.html.twig'
+
+services:
+#    domstor.template.provder.employee:
+#        class: %domstor.template.provider.employee.class%
+#        arguments: [@doctrine]
+    

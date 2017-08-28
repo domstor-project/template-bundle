@@ -1,0 +1,69 @@
+parameters:
+    
+services:
+    domstor.template.admin.employee:
+        class: '%domstor.template.admin.employee.class%'
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: domstor_template, label: employee, label_catalogue: '%domstor.template.admin.employee.translation_domain%', label_translator_strategy: sonata.admin.label.strategy.underscore }
+        arguments: [~, '%domstor.template.employee.entity%', ~]
+        calls:
+            - [setTranslationDomain, ['%domstor.template.admin.employee.translation_domain%']]
+            
+    domstor.template.admin.partner:
+        class: '%domstor.template.admin.partner.class%'
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: domstor_template, label: partner, label_catalogue: '%domstor.template.admin.partner.translation_domain%', label_translator_strategy: sonata.admin.label.strategy.underscore }
+        arguments: [~, '%domstor.template.partner.entity%', ~]
+        calls:
+            - [setTranslationDomain, ['%domstor.template.admin.partner.translation_domain%']]
+        
+    domstor.template.admin.post:
+        class: '%domstor.template.admin.post.class%'
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: domstor_template, label: posts, label_catalogue: '%domstor.template.admin.post.translation_domain%', label_translator_strategy: sonata.admin.label.strategy.underscore }
+        arguments: [~, '%domstor.template.post.entity%', ~]
+        calls:
+            - [setTranslationDomain, ['%domstor.template.admin.post.translation_domain%']]
+            - [setPoolFormatter, ['@sonata.formatter.pool']]
+            
+    domstor.template.admin.slider:
+        class: '%domstor.template.admin.slider.class%'
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: domstor_template, label: slider, label_catalogue: '%domstor.template.admin.slider.translation_domain%', label_translator_strategy: sonata.admin.label.strategy.underscore }
+        arguments: [~, '%domstor.template.slider.entity%', ~]
+        calls:
+            - [setTranslationDomain, ['%domstor.template.admin.slider.translation_domain%']]
+            - [setPoolFormatter, ['@sonata.formatter.pool']]
+    
+    domstor.template.admin.review:
+        class: '%domstor.template.admin.review.class%'
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: domstor_template, label: review, label_catalogue: '%domstor.template.admin.review.translation_domain%',  label_translator_strategy: sonata.admin.label.strategy.underscore }
+        arguments: [~, '%domstor.template.review.entity%', ~]
+        calls:
+            - [setTranslationDomain, ['%domstor.template.admin.review.translation_domain%']]
+        
+    domstor.template.admin.special_offer:
+        class: '%domstor.template.admin.special_offer.class%'
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: domstor_template, label: special offer, label_catalogue: '%domstor.template.admin.special_offer.translation_domain%',  label_translator_strategy: sonata.admin.label.strategy.underscore }
+        arguments: [~, '%domstor.template.special_offer.entity%', ~]
+        calls:
+            - [setTranslationDomain, ['%domstor.template.admin.special_offer.translation_domain%']]
+        
+    domstor.template.admin.urgent_sale:
+        class: '%domstor.template.admin.urgent_sale.class%'
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: domstor_template, label: urgent sale, label_catalogue: '%domstor.template.admin.urgent_sale.translation_domain%',  label_translator_strategy: sonata.admin.label.strategy.underscore }
+        arguments: [~, '%domstor.template.urgent_sale.entity%', ~]
+        calls:
+            - [setTranslationDomain, ['%domstor.template.admin.urgent_sale.translation_domain%']]
+        
+    domstor.template.admin.vacancy:
+        class: '%domstor.template.admin.vacancy.class%'
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: domstor_template, label: vacancy, label_catalogue: '%domstor.template.admin.vacancy.translation_domain%',  label_translator_strategy: sonata.admin.label.strategy.underscore }
+        arguments: [~, '%domstor.template.vacancy.entity%', ~]
+        calls:
+            - [setTranslationDomain, ['%domstor.template.admin.vacancy.translation_domain%']]
+

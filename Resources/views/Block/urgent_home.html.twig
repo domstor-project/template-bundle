@@ -1,0 +1,18 @@
+<div class="urgent_home">
+    <div class="urgent_sale">
+        <h3>Срочная продажа</h3>
+        <a id="urgent_prev" class="jcarousel_urgent-prev" href="#" data-target="#" title="Предыдущее предложение"></a><a id="urgent_next" class="jcarousel_urgent-next" href="#" data-target="#" title="Следующее предложение"></a>
+        <div class="jcarousel_urgent">
+            <div id="urgent" class="owl-carousel">
+                {% for row in rows %}
+                <div class="urgent"><!-- Блок срочной продажи -->
+                    <p>{{ row.text }}</p>
+                    <p><strong>{{ row.address }}</strong></p>
+                    <p><strong>{{ row.price }}&nbsp;рублей</strong></p>
+                    <p><strong>{{ row.phone }}</strong></p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
