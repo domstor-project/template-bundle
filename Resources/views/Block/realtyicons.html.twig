@@ -10,30 +10,30 @@
                     <li><a href="4">Снимут (442)</a></li>
                 </ul>
             </li>#}
-            {% for obj, actions in countsLiv %}
-                {% if actions is not empty %}                
-                <li class="{{ obj }}">
-                    <a id="icon-{{ obj }}" href="" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ tp.typehtml(obj)|raw }}</a>
+            {% for obj, actions in countsLiv %}<!--
+            -->{% if actions is not empty %}<!--
+                --><li class="{{ obj }}">
+                    <a id="icon-{{ obj }}" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ tp.typehtml(obj)|raw }}</a>
                     <ul class="dropdown-menu" aria-labelledby="icon-{{ obj }}">
                     {% for act, count in actions %}
                         <li><a href="{{ path('app_objects_list', {object: obj, action: act}) }}">{{ tp.action(act) }} ({{ count }})</a></li>
                     {% endfor %}
                     </ul>
-                </li>
-                {% endif %}
-            {% endfor %}            
-            {% for obj, actions in countsCom %}
-                {% if actions is not empty %}                
-                <li class="{{ obj }}">
-                    <a id="icon-{{ obj }}" href="" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Коммерческая<br>недвижимость</a>
+                </li><!--
+            -->{% endif %}<!--
+        -->{% endfor %}<!--
+        -->{% for obj, actions in countsCom %}<!--
+            -->{% if actions is not empty %}<!--
+                --><li class="{{ obj }}">
+                    <a id="icon-{{ obj }}" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Коммерческая<br>недвижимость</a>
                     <ul class="dropdown-menu" aria-labelledby="icon-{{ obj }}">
                     {% for act, count in actions %}
                         <li><a href="{{ path('app_objects_list', {object: obj, action: act}) }}">{{ tp.action(act) }} ({{ count }})</a></li>
                     {% endfor %}
                     </ul>
-                </li>
-                {% endif %}
-            {% endfor %}
-        </ul>
+                </li><!--
+            -->{% endif %}<!--
+        -->{% endfor %}<!--
+    --></ul>
     </div>
 </div>
