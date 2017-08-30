@@ -33,5 +33,8 @@ class DomstorTemplateExtension extends Extension
         
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
+        $def = $container->getDefinition('domstor.template.block.realtyicons.service');
+        $def->replaceArgument(2, $config['domstorlib']['realtyicons']);
+        
     }
 }

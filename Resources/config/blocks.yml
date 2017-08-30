@@ -92,10 +92,6 @@ services:
         arguments:
             - domstor.template.block.realtyicons.service
             - '@templating'
-        calls:
-            - [setOrgId, [13]]
-            - [setLocationId, [2004]]
-            - [setTemplate, ['%domstor.template.block.realtyicons.template%']]
-            - [setCacheDir, ['%kernel.cache_dir%']]
+            - []
         tags:
             - { name: sonata.block }

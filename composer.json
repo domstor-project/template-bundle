@@ -37,7 +37,6 @@
         "friendsofsymfony/user-bundle": "^2.0"
     },
     "require-dev": {
-        "franzl/studio": "0.11.2",
         "doctrine/orm": "^2.5"
     }
 }

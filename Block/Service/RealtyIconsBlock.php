@@ -16,6 +16,7 @@ use Sonata\BlockBundle\Model\BlockInterface;
 use Domstor_Builder;
 use Domstor_Helper;
 use Domstor\TemplateBundle\Model\TitleProvider;
+use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
 
 /**
  * Description of RealtyIconsBlock
@@ -24,76 +25,56 @@ use Domstor\TemplateBundle\Model\TitleProvider;
  */
 class RealtyIconsBlock extends AbstractBlockService
 {    
-    protected $defaultTemplate;
+    protected $parameters = [];
     
-    protected $orgId;
-    
-    protected $locationId;
-    
-    protected $cacheDir;
+    public function __construct($name, EngineInterface $templating, array $parameters)
+    {
+        parent::__construct($name, $templating);
+        $this->parameters = $parameters;
+    }
 
     public function configureSettings(OptionsResolver $resolver)
     {
         $resolver
-            ->setRequired(['template', 'org_id', 'location_id'])
+            ->setDefaults([
+                'org_id'=>1,
+                'location_id'=>2004,
+                'template'=>'DomstorTemplateBundle:Block:realtyicons.html.twig',
+                'cache_time'=> 86400,
+                'cache_type'=>'file',
+                'cache_dir'=>''
+            ])
         ;
-        if ($this->defaultTemplate!==null)
-        {
-            $resolver->setDefault('template', $this->defaultTemplate);
-        }
-        if ($this->orgId!==null)
-        {
-            $resolver->setDefault('org_id', $this->orgId);
-        }
-        if ($this->locationId!==null)
-        {
-            $resolver->setDefault('location_id', $this->locationId);
-        }
     }
     
-    public function setTemplate($template)
+    public function load(BlockInterface $block)
     {
-        $this->defaultTemplate = $template;
-    }
-    
-    public function setOrgId($orgId)
-    {
-        $this->orgId = (int)$orgId;
-    }
-    
-    public function setLocationId($locationId)
-    {
-        $this->locationId = (int)$locationId;
-    }
-    
-    public function setCacheDir($cacheDir)
-    {
-        $this->cacheDir = $cacheDir;
+        $block->setSettings($this->parameters);
     }
 
     public function execute(BlockContextInterface $blockContext, Response $response = null)
     {
+        $block = $blockContext->getBlock();
         $builder = new Domstor_Builder();
-        $domstor = $builder->build(array(
-            'org_id' => $this->orgId,
-            'location_id' => $this->locationId,
-            'cache' => array(
-                'type' => 'file',
-                'time' => 86400,
-                'uniq_key' => (string)$this->orgId,
-                'options' => array('directory' => $this->cacheDir),
-            ),
-        ));
+        $domstor = $builder->build([
+            'org_id' =>$block->getSetting('org_id'),
+            'location_id' => $block->getSetting('location_id'),
+            'cache' => [
+                'type' => $block->getSetting('cache_type'),
+                'time' => $block->getSetting('cache_time'),
+                'uniq_key' => (string)$block->getSetting('org_id'),
+                'options' => ['directory' => $block->getSetting('cache_dir')],
+            ],
+        ]);
 
-        $countsLiv = $domstor->getAllCounts(array('commerce' => false));
-        //$countsCom = $domstor->getAllCounts(array('living' => false));
+        $countsLiv = $domstor->getAllCounts(['commerce' => false]);
 
         $countsCom = [];
         $object = 'commerce';
-        $countsCom[$object] = array();
+        $countsCom[$object] = [];
         foreach (Domstor_Helper::getActions($object) as $action) {
             $c = $domstor->getCount($object, $action);
-            if ($c > 0 || $s['with_empty']) {
+            if ($c > 0) {
                 $countsCom[$object][$action] = $c;
             }
         }

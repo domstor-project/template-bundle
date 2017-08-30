@@ -25,9 +25,24 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('domstor_template');
 
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
+        $rootNode
+                ->children()
+                    ->arrayNode('domstorlib')
+                        ->children()
+                            ->arrayNode('realtyicons')
+                                ->children()
+                                    ->integerNode('org_id')->isRequired()->end()
+                                    ->integerNode('location_id')->isRequired()->end()
+                                    ->scalarNode('template')->defaultValue('DomstorTemplateBundle:Block:realtyicons.html.twig')->end()
+                                    ->scalarNode('cache_dir')->isRequired()->end()
+                                    ->scalarNode('cache_type')->isRequired()->end()
+                                    ->integerNode('cache_time')->defaultValue(86400)->end()
+                                ->end()
+                            ->end()
+                        ->end()
+                    ->end()
+                ->end()
+        ;
 
         return $treeBuilder;
     }
