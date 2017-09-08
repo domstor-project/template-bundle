@@ -39,11 +39,6 @@ abstract class BaseSlider implements SliderInterface
     /**
      * @var string
      */
-    protected $rawContent;
-    
-    /**
-     * @var string
-     */
     protected $contentFormatter;
     
     /**
@@ -79,11 +74,6 @@ abstract class BaseSlider implements SliderInterface
         return $this->content;
     }
 
-    public function getRawContent()
-    {
-        return $this->rawContent;
-    }
-
     public function getContentFormatter()
     {
         return $this->contentFormatter;
@@ -112,11 +102,6 @@ abstract class BaseSlider implements SliderInterface
     public function setContent($content)
     {
         $this->content = $content;
-    }
-
-    public function setRawContent($rawContent)
-    {
-        $this->rawContent = $rawContent;
     }
 
     public function setContentFormatter($contentFormatter)

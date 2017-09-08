@@ -1,0 +1,111 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Подать заявку</h4>
+        </div>
+        <div id="showAfterSendingRequest" style="display:none;">
+            <p style="padding: 1em;">Спасибо за обращение!<br /> В ближайшее время мы с вами обязательно свяжемся!</p>
+        </div>
+        <div id="showCaptchaError" style="display:none;">
+            <p style="padding: 1em;">Неверное проверочное слово</p>
+        </div>
+        <div class="form" id="hiddenAfterSendingRequest">
+            {{ form_start(form, {'attr': {'class': 'form-horizontal callback', 'id':'form_email_request'}}) }}
+            <div class="modal-body" id="hidebody">
+                <div class="form-group">
+                    {{ form_label(form.name, 'name', {
+                        'label_attr': {'class': 'sr-only'}
+                 }) }}
+                    {{ form_errors(form.name) }}
+                    {{ form_widget(form.name, {
+                        'attr': {'class':'form-control input', 'placeholder':'Ваше имя'}
+                }) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.phone, 'phone', {
+                        'label_attr': {'class': 'sr-only'}
+                 }) }}
+                    {{ form_errors(form.phone) }}
+                    {{ form_widget(form.phone, {
+                        'attr': {'class':'form-control input', 'placeholder':'Ваш телефон'}
+                }) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.email, 'email', {
+                        'label_attr': {'class': 'sr-only'}
+                 }) }}
+                    {{ form_errors(form.email) }}
+                    {{ form_widget(form.email, {
+                        'attr': {'class':'form-control input', 'placeholder':'Ваша эл.почта'}
+                }) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.message, 'message', {
+                        'label_attr': {'class': 'sr-only'}
+                 }) }}
+                    {{ form_errors(form.message) }}
+                    {{ form_widget(form.message, {
+                        'attr': {'class':'form-control textarea', 'placeholder':'Сообщение'}
+                }) }}
+                </div>
+                <div class="form-group">
+                    {{ form_errors(form.policy) }}
+                    {{ form_widget(form.policy) }}Я соглашаюсь с <a href="" data-toggle="modal" data-target="#exampleModalLong">политикой обработки персональных данных</a>
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.captcha, 'Captcha', {
+                        'label_attr': {'class': 'sr-only'}
+                 }) }}
+                    {{ form_errors(form.captcha) }}
+                    {{ form_widget(form.captcha, {
+                        'attr': {'class':'form-control input', 'placeholder':'Проверочное слово'}
+                }) }}
+                </div>
+            </div>
+            <div class="modal-footer">
+                {{ form_widget(form.submit, {
+                        'label': 'Отправить заявку'
+                }) }}
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+</div>
+
+{% block content_js %}
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $('#form_email_request').on('submit', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var form = $(this);
+                var data = form.serialize(); // пoдгoтaвливaeм дaнныe
+                $.ajax({// инициaлизируeм ajax зaпрoс
+                    type: 'POST', // oтпрaвляeм в POST фoрмaтe
+                    url: Routing.generate('template_api_email_request'), // путь дo oбрaбoтчикa, у нaс oн лeжит в тoй жe пaпкe
+                    dataType: 'json', // oтвeт ждeм в json фoрмaтe
+                    data: data, // дaнныe для oтпрaвки
+                    beforeSend: function (data) { // сoбытиe дo oтпрaвки
+                        form.find('button[type="submit"]').attr('disabled', 'disabled'); // нaпримeр, oтключим кнoпку, чтoбы нe жaли пo 100 рaз
+                        $('#showCaptchaError').hide();
+                    },
+                    success: function (data) {
+                            $('#hiddenAfterSendingRequest').hide(); // скрываем форму
+                            $('#showAfterSendingRequest').show(); 
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) { // в случae нeудaчнoгo зaвeршeния зaпрoсa к сeрвeру
+                        var resp = $.parseJSON(xhr.responseText);
+                        if (resp['form']['children']['captcha']['errors'].length>0)
+                        {
+                            $('#showCaptchaError').show();
+                        }
+                        form.find('button[type="submit"]').prop('disabled', false); // в любoм случae включим кнoпку oбрaтнo
+                        reload_captcha();
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+{% endblock%}

@@ -55,6 +55,12 @@ abstract class BaseVacancy implements VacancyInterface
     
     /**
      *
+     * @var string 
+     */
+    protected $description;
+
+    /**
+     *
      * @var int 
      */
     protected $sorting;
@@ -70,6 +76,11 @@ abstract class BaseVacancy implements VacancyInterface
      * @var DateTime 
      */
     protected $updatedAt;
+    
+    /**
+     * @var string
+     */
+    protected $contentFormatter;
     
     public function setTitle($title)
     {
@@ -140,6 +151,26 @@ abstract class BaseVacancy implements VacancyInterface
     {
         return $this->updatedAt;
     }    
+    
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+    
+    public function getContentFormatter()
+    {
+        return $this->contentFormatter;
+    }
+    
+    public function setContentFormatter($contentFormatter)
+    {
+        $this->contentFormatter = $contentFormatter;
+    }
     
     public function prePersist()
     {

@@ -8,14 +8,14 @@
 
 namespace Domstor\TemplateBundle\Model;
 
-use Domstor\TemplateBundle\Model\PostInterface;
+use Domstor\TemplateBundle\Model\VacancyInterface;
 use Knp\Component\Pager\Pagination\AbstractPagination;
 
 /**
  *
  * @author Dmitry Anikeev <anikeev.dmitry@outlook.com>
  */
-interface PostProviderInterface
+interface VacancyProviderInterface
 {
     /**
      * 
@@ -28,7 +28,7 @@ interface PostProviderInterface
     /**
      * 
      * @param int $id
-     * @return PostInterface|null Description
+     * @return VacancyInterface|null Description
      */
     public function findForShowPage($id);
 }

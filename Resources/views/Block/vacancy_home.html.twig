@@ -5,8 +5,9 @@
         <div class="vacancy_block">
             <h4>{{ row.title }}</h4>
             <p>{{ row.place }}</p>
-            <p><strong>З/п от 30 000 рублей</strong></p>
+            <p><strong>{{ row.salary|raw}}</strong></p>
             <p><strong>{{ row.phone }}</strong></p>
+            <a href="{{ path('app_vacancies_show', {'vacancy': row.id}) }}" title="Перейти на страницу вакансии"></a>
         </div>
         {% endfor %}
     </div>

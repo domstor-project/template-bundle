@@ -69,11 +69,6 @@ abstract class BasePost implements PostInterface
     /**
      * @var string
      */
-    protected $rawContent;
-    
-    /**
-     * @var string
-     */
     protected $contentFormatter;
     
     public function __construct()
@@ -150,20 +145,10 @@ abstract class BasePost implements PostInterface
     {
         $this->image = $image;
     }
-    
-    public function getRawContent()
-    {
-        return $this->rawContent;
-    }
 
     public function getContentFormatter()
     {
         return $this->contentFormatter;
-    }
-
-    public function setRawContent($rawContent)
-    {
-        $this->rawContent = $rawContent;
     }
 
     public function setContentFormatter($contentFormatter)

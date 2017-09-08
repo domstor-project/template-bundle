@@ -29,6 +29,8 @@ interface VacancyInterface
     public function setCreatedAt(DateTime $createdAt);
 
     public function setUpdatedAt(DateTime $updatedAt);
+    
+    public function setDescription($description);
 
     public function getId();
 
@@ -45,4 +47,10 @@ interface VacancyInterface
     public function getCreatedAt();
 
     public function getUpdatedAt();
+    
+    public function getDescription();
+    
+    public function setContentFormatter($contentFormatter);
+    
+    public function getContentFormatter();
 }

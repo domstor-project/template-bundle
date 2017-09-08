@@ -28,7 +28,6 @@ class BasePostRepository extends EntityRepository implements BlockContentProvide
      */
     protected $paginator;
 
-
     public function setPaginator(Paginator $paginator)
     {
         $this->paginator = $paginator;
@@ -46,7 +45,7 @@ class BasePostRepository extends EntityRepository implements BlockContentProvide
         return $qb->getQuery()->getResult();
     }
     
-    public function findForNewsPage($page, $limit)
+    public function findForListPage($page, $limit)
     {
         $qb = $this->createQueryBuilder('p');
         $qb
@@ -67,9 +66,9 @@ class BasePostRepository extends EntityRepository implements BlockContentProvide
             ->addSelect('image')
             ->leftJoin('p.image', 'image')
             ->where($qb->expr()->eq('p.id', ':id'))
+            ->andWhere('p.enabled = 1')
             ->setParameter('id', $id, PDO::PARAM_INT)
-        ;
-        
+        ;        
         return $qb->getQuery()->getOneOrNullResult();
     }
 }

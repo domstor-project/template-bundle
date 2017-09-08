@@ -15,8 +15,8 @@ use Sonata\AdminBundle\Show\ShowMapper;
 use Sonata\FormatterBundle\Formatter\Pool as FormatterPool;
 use Domstor\TemplateBundle\Model\PostInterface;
 use Sonata\FormatterBundle\Form\Type\FormatterType;
-use Sonata\CoreBundle\Form\Type\DateTimePickerType;
 use Sonata\AdminBundle\Form\Type\ModelListType;
+use Sonata\CoreBundle\Form\Type\DatePickerType;
 
 /**
  * Description of PostAdmin
@@ -87,7 +87,7 @@ class PostAdmin extends AbstractAdmin
                 ->add('content', FormatterType::class, array(
                     'event_dispatcher' => $formMapper->getFormBuilder()->getEventDispatcher(),
                     'format_field' => 'contentFormatter',
-                    'source_field' => 'rawContent',
+                    'source_field' => 'content',
                     'format_field_options' => array(
                         'choices' => ['rawhtml'=>'rawhtml', 'richhtml'=>'richhtml'],
                         'data'=>$format
@@ -111,7 +111,7 @@ class PostAdmin extends AbstractAdmin
                     'class' => 'col-md-4',
                 ))
                 ->add('enabled', null, array('required' => false))
-                ->add('publicationDateStart', DateTimePickerType::class, array('dp_side_by_side' => true))
+                ->add('publicationDateStart', DatePickerType::class)
             ->end()
         ;
     }
@@ -124,8 +124,10 @@ class PostAdmin extends AbstractAdmin
         $listMapper
             ->addIdentifier('id')
             ->add('title', 'string')
-            ->add('publicationDateStart')
-            ->add('enabled')
+            ->add('publicationDateStart', 'date')
+            ->add('enabled', 'boolean', [
+                'editable' => true
+            ])
         ;
     }
 

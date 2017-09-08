@@ -18,6 +18,10 @@
                 <source>form.label_sorting</source>
                 <target>Сортировка</target>
             </trans-unit>
+            <trans-unit id="form.label_description">
+                <source>form.label_description</source>
+                <target>Подробное описание</target>
+            </trans-unit>
             <trans-unit id="form.label_phone">
                 <source>form.label_phone</source>
                 <target>Контактный телефон</target>

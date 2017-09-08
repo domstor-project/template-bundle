@@ -42,12 +42,14 @@ class EmployeeAdmin extends AbstractAdmin
     {
         $list
             ->addIdentifier('id')
+            ->add('sorting', null, [
+                'editable' => true
+            ])
             ->add('image')
             ->add('name')
             ->add('duty')
             ->add('phone')
             ->add('email')
-            ->add('sorting')
         ;
     }
     

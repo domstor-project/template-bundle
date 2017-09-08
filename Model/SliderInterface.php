@@ -23,8 +23,6 @@ interface SliderInterface
 
     public function getContent();
 
-    public function getRawContent();
-
     public function getContentFormatter();
 
     public function getSorting();
@@ -36,8 +34,6 @@ interface SliderInterface
     public function setImage(MediaInterface $image);
 
     public function setContent($content);
-
-    public function setRawContent($rawContent);
 
     public function setContentFormatter($contentFormatter);
 

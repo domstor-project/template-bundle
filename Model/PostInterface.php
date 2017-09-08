@@ -33,8 +33,6 @@ interface PostInterface
     public function setUpdatedAt(DateTime $updatedAt);
     public function getImage();
     public function setImage(MediaInterface $image);
-    public function getRawContent();
     public function getContentFormatter();
-    public function setRawContent($rawContent);
     public function setContentFormatter($contentFormatter);
 }

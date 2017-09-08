@@ -41,6 +41,17 @@ class Configuration implements ConfigurationInterface
                             ->end()
                         ->end()
                     ->end()
+                    ->arrayNode('mailer')
+                        ->children()
+                            ->arrayNode('request')
+                                ->children()
+                                    ->scalarNode('service')->isRequired()->end()
+                                    ->scalarNode('to')->isRequired()->end()
+                                    ->scalarNode('from')->isRequired()->end()
+                                ->end()
+                            ->end()                                
+                        ->end()
+                    ->end()
                 ->end()
         ;
 

@@ -44,11 +44,13 @@ class SpecialOfferAdmin extends AbstractAdmin
     {
         $list
             ->addIdentifier('id')
+            ->add('sorting', null, [
+                'editable' => true
+            ])
             ->add('image')
             ->add('address')
             ->add('price')
             ->add('link')
-            ->add('sorting')
         ;
     }
     

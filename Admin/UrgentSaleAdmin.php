@@ -36,10 +36,12 @@ class UrgentSaleAdmin extends AbstractAdmin
     {
         $list
             ->addIdentifier('id')
+            ->add('sorting', null, [
+                'editable' => true
+            ])
             ->add('address')
             ->add('price')
             ->add('phone')
-            ->add('sorting')
         ;
     }
 }

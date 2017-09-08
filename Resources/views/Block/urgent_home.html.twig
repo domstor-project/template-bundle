@@ -10,6 +10,7 @@
                     <p><strong>{{ row.address }}</strong></p>
                     <p><strong>{{ row.price }}&nbsp;рублей</strong></p>
                     <p><strong>{{ row.phone }}</strong></p>
+                    <a href="{{path('app_urgent_show',{'urgent':row.id})}}" title="Перейти на страницу объекта"></a>
                 </div>
                 {% endfor %}
             </div>

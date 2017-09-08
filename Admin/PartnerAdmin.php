@@ -39,9 +39,11 @@ class PartnerAdmin extends AbstractAdmin
     {
         $list
             ->addIdentifier('id')
+            ->add('sorting', null, [
+                'editable' => true
+            ])
             ->add('image')
             ->add('name')
-            ->add('sorting')
         ;
     }
     

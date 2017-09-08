@@ -11,8 +11,10 @@
         </id>
         <field name="title" type="string" column="title" nullable="false"/>
         <field name="place" type="string" column="place" nullable="false"/>
-        <field name="salary" type="decimal" column="salary" nullable="false"/>
+        <field name="salary" type="string" column="salary" nullable="false"/>
         <field name="phone" type="string" column="phone" nullable="false"/>
+        <field name="description" type="text" column="description" nullable="false"/>
+        <field name="contentFormatter" type="string" column="content_formatter"/>
         <field name="sorting" type="integer" column="sorting" nullable="false"/>
         <field name="createdAt" type="datetime" column="created_at" nullable="false"/>
         <field name="updatedAt" type="datetime" column="updated_at" nullable="false"/>

@@ -8,6 +8,7 @@
 namespace Domstor\TemplateBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 /**
  * Description of DomstorTemplateBundle
@@ -16,5 +17,9 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  */
 class DomstorTemplateBundle extends Bundle
 {
-    
+    public function build(ContainerBuilder $container)
+    {
+        parent::build($container);
+        $container->addCompilerPass(new DependencyInjection\Compiler\MailerPass());
+    }
 }

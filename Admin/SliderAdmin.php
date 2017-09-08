@@ -87,10 +87,10 @@ class SliderAdmin extends AbstractAdmin
                     'event_dispatcher' => $formMapper->getFormBuilder()->getEventDispatcher(),
                     'format_field'   => 'contentFormatter',
                     'format_field_options' => array(
-                        'choices' => ['richhtml'=>'richhtml'],
-                        'data'=>'richhtml'
+                        'choices' => ['rawhtml'=>'rawhtml'],
+                        'data'=>'rawhtml'
                     ),
-                    'source_field'   => 'rawContent',
+                    'source_field'   => 'content',
                     'listener'       => true,
                     'target_field'   => 'content',
                     'source_field_options' => array(
@@ -115,9 +115,11 @@ class SliderAdmin extends AbstractAdmin
     {
         $listMapper
             ->addIdentifier('id')
+            ->add('sorting', null, [
+                'editable' => true
+            ])
             ->add('image')
-            ->add('content')
-            ->add('sorting')
+            ->add('content', 'html')
         ;
     }
 }

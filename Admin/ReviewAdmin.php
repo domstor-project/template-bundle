@@ -12,6 +12,8 @@ use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Sonata\CoreBundle\Form\Type\DatePickerType;
 
 /**
  * Description of ReviewAdmin
@@ -23,9 +25,9 @@ class ReviewAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $form)
     {
         $form            
-            ->add('reviewDate')
+            ->add('reviewDate', DatePickerType::class)
             ->add('author')
-            ->add('text')
+            ->add('text', TextareaType::class)
         ;
     }
     
@@ -33,7 +35,7 @@ class ReviewAdmin extends AbstractAdmin
     {
         $list
             ->addIdentifier('id')
-            ->add('reviewDate')
+            ->add('reviewDate', 'date')
             ->add('author')
         ;
     }
