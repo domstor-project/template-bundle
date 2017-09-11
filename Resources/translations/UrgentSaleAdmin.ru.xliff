@@ -18,6 +18,10 @@
                 <source>form.label_phone</source>
                 <target>Контактный телефон</target>
             </trans-unit>
+            <trans-unit id="form.label_link">
+                <source>form.label_link</source>
+                <target>Ссылка</target>
+            </trans-unit>
             <trans-unit id="form.label_sorting">
                 <source>form.label_sorting</source>
                 <target>Сортировка</target>
@@ -41,6 +45,10 @@
             <trans-unit id="list.label_phone">
                 <source>list.label_phone</source>
                 <target>Контактный телефон</target>
+            </trans-unit>
+            <trans-unit id="list.label_link">
+                <source>list.label_link</source>
+                <target>Ссылка</target>
             </trans-unit>
             <trans-unit id="list.label_sorting">
                 <source>list.label_sorting</source>

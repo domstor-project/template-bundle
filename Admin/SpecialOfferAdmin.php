@@ -34,7 +34,7 @@ class SpecialOfferAdmin extends AbstractAdmin
             ))
             ->add('text')
             ->add('address')
-            ->add('price', NumberType::class)
+            ->add('price')
             ->add('link', UrlType::class)
             ->add('sorting')
         ;
@@ -50,7 +50,7 @@ class SpecialOfferAdmin extends AbstractAdmin
             ->add('image')
             ->add('address')
             ->add('price')
-            ->add('link')
+            ->add('link', 'url')
         ;
     }
     

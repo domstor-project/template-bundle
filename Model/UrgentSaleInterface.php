@@ -45,4 +45,8 @@ interface UrgentSaleInterface
     public function getCreatedAt();
 
     public function getUpdatedAt();
+    
+    public function getLink();
+
+    public function setLink($link);
 }

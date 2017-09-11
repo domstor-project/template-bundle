@@ -43,7 +43,7 @@ abstract class BaseUrgentSale implements UrgentSaleInterface
     
     /**
      *
-     * @var decimal 
+     * @var string 
      */
     protected $price;
     
@@ -70,6 +70,12 @@ abstract class BaseUrgentSale implements UrgentSaleInterface
      * @var DateTime 
      */
     protected $updatedAt;
+    
+    /**
+     *
+     * @var string 
+     */
+    protected $link;
     
     public function setText($text)
     {
@@ -152,5 +158,14 @@ abstract class BaseUrgentSale implements UrgentSaleInterface
     {
         $this->setUpdatedAt(new DateTime());
     }
+    
+    public function getLink()
+    {
+        return $this->link;
+    }
 
+    public function setLink($link)
+    {
+        $this->link = $link;
+    }
 }

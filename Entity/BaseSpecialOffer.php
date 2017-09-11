@@ -50,7 +50,7 @@ abstract class BaseSpecialOffer implements SpecialOfferInterface
     
     /**
      *
-     * @var decimal 
+     * @var string 
      */
     protected $price;
     

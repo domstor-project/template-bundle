@@ -11,8 +11,9 @@
         </id>
         <field name="text" type="string" column="text" nullable="false"/>
         <field name="address" type="string" column="address" nullable="false"/>
-        <field name="price" type="decimal" column="price" nullable="false"/>
+        <field name="price" type="string" column="price" nullable="false"/>
         <field name="phone" type="string" column="phone" nullable="false"/>
+        <field name="link" type="string" column="link" nullable="false"/>
         <field name="sorting" type="integer" column="sorting" nullable="false"/>
         <field name="createdAt" type="datetime" column="created_at" nullable="false"/>
         <field name="updatedAt" type="datetime" column="updated_at" nullable="false"/>

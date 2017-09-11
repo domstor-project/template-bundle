@@ -10,7 +10,7 @@
                     <div class="special_txt">
                         <p>{{ row.text }}</p>
                         <p><strong>{{ row.address }}</strong></p>
-                        <p><strong>{{ row.price }}</strong></p>
+                        <p><strong>{{ row.price|raw }}</strong></p>
                     </div>
                     <a href="{{ row.link }}" title="Перейти на страницу объекта"></a>
                 </div>
