@@ -7,7 +7,7 @@
             <p>{{ row.place }}</p>
             <p><strong>{{ row.salary|raw}}</strong></p>
             <p><strong>{{ row.phone }}</strong></p>
-            <a href="{{ path('app_vacancies_show', {'vacancy': row.id}) }}" title="Перейти на страницу вакансии"></a>
+            <a class="vacancy_link" href="{{ path('app_vacancies_show', {'vacancy': row.id}) }}" title="Перейти на страницу вакансии"></a>
         </div>
         {% endfor %}
     </div>

@@ -33,6 +33,7 @@ class EmailRequestType extends AbstractType
         'validation_groups' => array(
             'create','update'
         ),
+        'csrf_protection' => false,
     ));
     }
     
@@ -61,7 +62,8 @@ class EmailRequestType extends AbstractType
             ]
             ])
             ->add('policy', CheckboxType::class, ['attr' => ['class' => 'form-check-input']])
-            ->add('captcha', CaptchaType::class, ['reload'=>true, 'as_url'=>true, 'attr' => ['class' => 'form-control input']])
+            ->add('captcha', CaptchaType::class, ['reload'=>true, 'as_url'=>true, 'attr' => ['class' => 'form-control input'], 'width' => 390,
+        'height' => 150])
             ->add('submit', SubmitType::class, [
                 'attr' => ['class' => 'btn']
             ])

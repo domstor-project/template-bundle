@@ -8,9 +8,9 @@
                 <div class="urgent"><!-- Блок срочной продажи -->
                     <p>{{ row.text }}</p>
                     <p><strong>{{ row.address }}</strong></p>
-                    <p><strong>{{ row.price|raw }}&nbsp;рублей</strong></p>
+                    <p><strong>{{ row.price|raw }}</strong></p>
                     <p><strong>{{ row.phone }}</strong></p>
-                    <a href="{{ row.link }}" title="Перейти на страницу объекта"></a>
+                    <a class="urgent_link" href="{{ row.link }}" title="Перейти на страницу объекта"></a>
                 </div>
                 {% endfor %}
             </div>

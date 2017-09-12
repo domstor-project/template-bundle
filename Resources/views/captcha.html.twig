@@ -11,7 +11,7 @@
             img.src = '{{ captcha_code }}?n=' + (new Date()).getTime();
         }
     </script>
-    <a class="captcha_reload" href="javascript:reload_captcha();">{{ 'Renew'|trans({}, 'gregwar_captcha') }}</a>
+    <a class="captcha_reload" href="javascript:reload_captcha();" title="{{ 'Renew'|trans({}, 'gregwar_captcha') }}"><span class="glyphicon glyphicon-refresh"></span></a>
     {% endif %}
     {{ form_widget(form) }}
 {% endspaceless %}

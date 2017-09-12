@@ -31,7 +31,7 @@ abstract class BaseReview implements ReviewInterface
     
     /**
      *
-     * @var string 
+     * @var string
      */
     protected $text;
     

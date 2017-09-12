@@ -6,7 +6,7 @@
         <id name="id" type="integer">
             <generator strategy="AUTO" />
         </id>
-        <field name="text" type="string" column="text" nullable="false"/>
+        <field name="text" type="text" column="text" nullable="false"/>
         <field name="reviewDate" type="datetime" column="review_date" nullable="false"/>
         <field name="author" type="string" column="author" nullable="false"/>
         <field name="createdAt" type="datetime" column="created_at" nullable="false"/>

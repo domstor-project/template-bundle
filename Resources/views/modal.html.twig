@@ -7,9 +7,7 @@
         <div id="showAfterSendingRequest" style="display:none;">
             <p style="padding: 1em;">Спасибо за обращение!<br /> В ближайшее время мы с вами обязательно свяжемся!</p>
         </div>
-        <div id="showCaptchaError" style="display:none;">
-            <p style="padding: 1em;">Неверное проверочное слово</p>
-        </div>
+        
         <div class="form" id="hiddenAfterSendingRequest">
             {{ form_start(form, {'attr': {'class': 'form-horizontal callback', 'id':'form_email_request'}}) }}
             <div class="modal-body" id="hidebody">
@@ -61,6 +59,9 @@
                     {{ form_widget(form.captcha, {
                         'attr': {'class':'form-control input', 'placeholder':'Проверочное слово'}
                 }) }}
+                    <div id="showCaptchaError" style="display:none;">
+                        <p>Неверное проверочное слово</p>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">

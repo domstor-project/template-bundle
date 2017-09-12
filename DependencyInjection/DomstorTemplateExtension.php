@@ -37,8 +37,10 @@ class DomstorTemplateExtension extends Extension
         $def->replaceArgument(2, $config['domstorlib']['realtyicons']);
         
         $container->setParameter('domstor.template.mailer.request.service_name', 'swiftmailer.mailer.' . $config['mailer']['request']['service']);
-        $container->setParameter('domstor.template.mailer.request.to', $config['mailer']['request']['to']);
+        $container->setParameter('domstor.template.mailer.request.to', array_values($config['mailer']['request']['to']));
         $container->setParameter('domstor.template.mailer.request.from', $config['mailer']['request']['from']);
+        $container->setParameter('domstor.template.mailer.request.subject', $config['mailer']['request']['subject']);
+        $container->setParameter('domstor.template.mailer.request.email_template', $config['mailer']['request']['email_template']);
         
     }
 }

@@ -40,23 +40,6 @@ class PostAdmin extends AbstractAdmin
     
     /**
      * {@inheritdoc}
-     * @param PostInterface $post Description
-     */
-    public function prePersist($post)
-    {
-        $post->setContent($this->formatterPool->transform($post->getContentFormatter(), $post->getRawContent()));
-    }
-    
-    /**
-     * {@inheritdoc}
-     */
-    public function preUpdate($post)
-    {
-        $post->setContent($this->formatterPool->transform($post->getContentFormatter(), $post->getRawContent()));
-    }
-    
-    /**
-     * {@inheritdoc}
      */
     protected function configureShowFields(ShowMapper $showMapper)
     {

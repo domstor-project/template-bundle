@@ -11,6 +11,7 @@ namespace Domstor\TemplateBundle\Controller;
 use FOS\RestBundle\Controller\FOSRestController;
 use Symfony\Component\HttpFoundation\Request;
 use Domstor\TemplateBundle\Form\Type\EmailRequestType;
+use Swift_Message;
 
 /**
  * Description of ApiController
@@ -21,7 +22,7 @@ class ApiController extends FOSRestController
 {
 
     public function postEmailRequestAction(Request $request)
-    {
+    {   
         $form = $this->createForm(EmailRequestType::class);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid())
@@ -31,14 +32,16 @@ class ApiController extends FOSRestController
             $mailer = $this->get('domstor.template.mailer.request');
             $to = $this->getParameter('domstor.template.mailer.request.to');
             $from = $this->getParameter('domstor.template.mailer.request.from');
+            $template = $this->getParameter('domstor.template.mailer.request.email_template');
             /* @var $templating \Symfony\Bundle\TwigBundle\TwigEngine */
             $templating = $this->get('templating');
+            /* @var $message Swift_Message */
             $message = $mailer->createMessage();
             $message
-            ->setSubject('Новая заявка')
+            ->setSubject($this->getParameter('domstor.template.mailer.request.subject'))
             ->setFrom($from)
             ->setBody(
-                $templating->render('DomstorTemplateBundle:Email:email_request.html.twig', [
+                $templating->render($template, [
                     'name'=>$data['name'],
                     'email'=>$data['email'],
                     'phone'=>$data['phone'],

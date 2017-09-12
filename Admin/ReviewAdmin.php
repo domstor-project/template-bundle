@@ -27,7 +27,7 @@ class ReviewAdmin extends AbstractAdmin
         $form            
             ->add('reviewDate', DatePickerType::class)
             ->add('author')
-            ->add('text', TextareaType::class)
+            ->add('text', TextareaType::class, ['attr' => ['size' => '3000', 'rows'=>20]])
         ;
     }
     
