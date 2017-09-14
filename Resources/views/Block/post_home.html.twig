@@ -7,6 +7,6 @@
                 <p class="data">{{ row.publicationDateStart|date('d.m.Y') }}</p>
             </div>
         {% endfor %}
-        <p class="archive_news"><a href="{{ url('app_news_list') }}"><span></span>Архив новостей</a></p>
+        <p class="archive_news"><a href="{{ url('app_news_list') }}" class="btn more">Все новости</a></p>
     </div>
 </div>

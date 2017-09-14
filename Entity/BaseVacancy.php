@@ -9,12 +9,15 @@ namespace Domstor\TemplateBundle\Entity;
 
 use Domstor\TemplateBundle\Model\VacancyInterface;
 use DateTime;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 
 /**
  * Description of BaseVacancy
  *
  * @author Dmitry Anikeev <anikeev.dmitry@outlook.com>
+ * @UniqueEntity("sorting")
  */
 abstract class BaseVacancy implements VacancyInterface
 {    
@@ -32,36 +35,62 @@ abstract class BaseVacancy implements VacancyInterface
     /**
      *
      * @var string 
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 255
+     * )
      */
     protected $title;
     
     /**
      *
      * @var string 
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 255
+     * )
      */
     protected $place;
     
     /**
      *
-     * @var decimal 
+     * @var string
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 255
+     * )
      */
     protected $salary;
     
     /**
      *
      * @var string 
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 255
+     * )
      */
     protected $phone;
     
     /**
      *
-     * @var string 
+     * @var string
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 65000
+     * )
      */
     protected $description;
 
     /**
      *
-     * @var int 
+     * @var int
+     * @Assert\NotBlank()
      */
     protected $sorting;
         
@@ -79,6 +108,7 @@ abstract class BaseVacancy implements VacancyInterface
     
     /**
      * @var string
+     * @Assert\NotBlank()
      */
     protected $contentFormatter;
     

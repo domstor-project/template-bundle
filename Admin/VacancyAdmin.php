@@ -69,8 +69,7 @@ class VacancyAdmin extends AbstractAdmin
             ->add('title')
             ->add('place')
             ->add('salary')
-            ->add('phone')
-            
+            ->add('phone')            
         ;
     }
 }

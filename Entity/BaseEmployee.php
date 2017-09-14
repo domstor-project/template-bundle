@@ -11,11 +11,14 @@ namespace Domstor\TemplateBundle\Entity;
 use Domstor\TemplateBundle\Model\EmployeeInterface;
 use Sonata\MediaBundle\Model\MediaInterface;
 use DateTime;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Description of BaseEmployee
  *
  * @author Dmitry Anikeev <anikeev.dmitry@outlook.com>
+ * @UniqueEntity("sorting")
  */
 abstract class BaseEmployee implements EmployeeInterface
 {   
@@ -39,30 +42,52 @@ abstract class BaseEmployee implements EmployeeInterface
     /**
      *
      * @var string 
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 255
+     * )
      */
     protected $name;
     
     /**
      *
      * @var string 
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 255
+     * )
      */
     protected $duty;
     
     /**
      *
      * @var string 
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 255
+     * )
      */
     protected $phone;
     
     /**
      *
      * @var string 
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 255
+     * )
+     * @Assert\Email()
      */
     protected $email;
     
     /**
      *
      * @var integer 
+     * @Assert\NotBlank()
      */
     protected $sorting;
     
