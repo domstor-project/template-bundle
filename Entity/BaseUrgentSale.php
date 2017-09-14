@@ -10,11 +10,14 @@ namespace Domstor\TemplateBundle\Entity;
 
 use Domstor\TemplateBundle\Model\UrgentSaleInterface;
 use DateTime;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Description of BaseUrgent
  *
  * @author Dmitry Anikeev <anikeev.dmitry@outlook.com>
+ * @UniqueEntity("sorting")
  */
 abstract class BaseUrgentSale implements UrgentSaleInterface
 {    
@@ -31,31 +34,52 @@ abstract class BaseUrgentSale implements UrgentSaleInterface
     
     /**
      *
-     * @var string 
+     * @var string
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 65000
+     * )
      */
     protected $text;
     
     /**
      *
      * @var string 
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 255
+     * )
      */
     protected $address;
     
     /**
      *
      * @var string 
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 255
+     * )
      */
     protected $price;
     
     /**
      *
      * @var string 
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 255
+     * )
      */
     protected $phone;
     
     /**
      *
      * @var int 
+     * @Assert\NotBlank()
      */
     protected $sorting;
         
@@ -74,6 +98,11 @@ abstract class BaseUrgentSale implements UrgentSaleInterface
     /**
      *
      * @var string 
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 255
+     * )
      */
     protected $link;
     

@@ -11,11 +11,14 @@ namespace Domstor\TemplateBundle\Entity;
 use Domstor\TemplateBundle\Model\SpecialOfferInterface;
 use Sonata\MediaBundle\Model\MediaInterface;
 use DateTime;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Description of BaseSpecial
  *
  * @author Dmitry Anikeev <anikeev.dmitry@outlook.com>
+ * @UniqueEntity("sorting")
  */
 abstract class BaseSpecialOffer implements SpecialOfferInterface
 {   
@@ -39,30 +42,51 @@ abstract class BaseSpecialOffer implements SpecialOfferInterface
     /**
      *
      * @var string 
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 65000
+     * )
      */
     protected $text;
     
     /**
      *
      * @var string 
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 255
+     * )
      */
     protected $address;
     
     /**
      *
      * @var string 
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 255
+     * )
      */
     protected $price;
     
     /**
      *
      * @var string 
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 255
+     * )
      */
     protected $link;
     
     /**
      *
      * @var int 
+     * @Assert\NotBlank()
      */
     protected $sorting;
         

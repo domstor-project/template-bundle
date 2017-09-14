@@ -10,5 +10,6 @@
             <a class="vacancy_link" href="{{ path('app_vacancies_show', {'vacancy': row.id}) }}" title="Перейти на страницу вакансии"></a>
         </div>
         {% endfor %}
+        <p class="center"><a href="{{ url('app_vacancies_list') }}" class="btn more center">Все вакансии</a></p>
     </div>
 </div>

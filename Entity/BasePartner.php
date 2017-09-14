@@ -11,11 +11,14 @@ namespace Domstor\TemplateBundle\Entity;
 use Domstor\TemplateBundle\Model\PartnerInterface;
 use Sonata\MediaBundle\Model\MediaInterface;
 use DateTime;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Description of BasePartner
  *
  * @author Dmitry Anikeev <anikeev.dmitry@outlook.com>
+ * @UniqueEntity("sorting")
  */
 abstract class BasePartner implements PartnerInterface
 {    
@@ -39,12 +42,18 @@ abstract class BasePartner implements PartnerInterface
     /**
      *
      * @var string 
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 255
+     * )
      */
     protected $name;
 
     /**
      *
      * @var int 
+     * @Assert\NotBlank()
      */
     protected $sorting;
         

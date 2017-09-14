@@ -11,11 +11,14 @@ namespace Domstor\TemplateBundle\Entity;
 use Domstor\TemplateBundle\Model\SliderInterface;
 use DateTime;
 use Sonata\MediaBundle\Model\MediaInterface;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Description of BaseSlider
  *
  * @author Dmitry Anikeev <anikeev.dmitry@outlook.com>
+ * @UniqueEntity("sorting")
  */
 abstract class BaseSlider implements SliderInterface
 {
@@ -33,17 +36,28 @@ abstract class BaseSlider implements SliderInterface
     
     /**
      * @var string
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 65000
+     * )
      */
     protected $content;
     
     /**
      * @var string
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 255
+     * )
      */
     protected $contentFormatter;
     
     /**
      *
      * @var int 
+     * @Assert\NotBlank()
      */
     protected $sorting;
     

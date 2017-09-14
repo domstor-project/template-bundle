@@ -11,6 +11,7 @@ namespace Domstor\TemplateBundle\Entity;
 use DateTime;
 use Domstor\TemplateBundle\Model\PostInterface;
 use Sonata\MediaBundle\Model\MediaInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Description of Post
@@ -32,6 +33,11 @@ abstract class BasePost implements PostInterface
     
     /**
      * @var string
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 255
+     * )
      */
     protected $title;
     
@@ -63,11 +69,17 @@ abstract class BasePost implements PostInterface
     
     /**
      * @var string
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 65000
+     * )
      */
     protected $content;
     
     /**
      * @var string
+     * @Assert\NotBlank()
      */
     protected $contentFormatter;
     

@@ -10,6 +10,7 @@ namespace Domstor\TemplateBundle\Entity;
 
 use Domstor\TemplateBundle\Model\ReviewInterface;
 use DateTime;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Description of BaseReview
@@ -32,18 +33,30 @@ abstract class BaseReview implements ReviewInterface
     /**
      *
      * @var string
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 65000
+     * )
      */
     protected $text;
     
     /**
      *
      * @var DateTime 
+     * @Assert\NotNull()
+     * @Assert\DateTime()
      */
     protected $reviewDate;
     
     /**
      *
      * @var string 
+     * @Assert\NotBlank()
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 255
+     * )
      */
     protected $author;    
         
