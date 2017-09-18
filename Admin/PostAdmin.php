@@ -105,6 +105,12 @@ class PostAdmin extends AbstractAdmin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
+            ->add('_action', null, array(
+                'actions' => array(
+                    'edit' => array(),
+                    'delete' => array(),
+                )
+            ))
             ->addIdentifier('id')
             ->add('title', 'string')
             ->add('publicationDateStart', 'date')

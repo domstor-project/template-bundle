@@ -46,6 +46,10 @@
                 <source>urgent sale</source>
                 <target>Срочная продажа</target>
             </trans-unit>
+            <trans-unit id="domstor_template">
+                <source>domstor_template</source>
+                <target>Сайт</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

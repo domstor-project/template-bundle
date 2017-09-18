@@ -6,13 +6,13 @@
             <div id="reviews" class="owl-carousel">
                 {% for row in rows %}
                     <div class="review">
-                        <p><a href="{{ path('app_reviews_show', {'review': row.id}) }}" title="Смотреть отзыв полностью">{{ row.text|length > 298 ? row.text|slice(0, 298) ~ '...' : row.text }}</a></p>
+                        <p><a href="{{ path('app_reviews_show', {'review': row.id}) }}" title="Смотреть отзыв полностью">{{ row.text|length > 127 ? row.text|slice(0, 127) ~ '...' : row.text }}</a></p>
                         <p class="data">{{ row.reviewDate|date('d.m.Y') }}</p>
                         <p class="signature">{{ row.author }}</p>
                     </div>                               
                 {% endfor %} 
             </div>
         </div>
-        <p class="center"><a href="{{ url('app_reviews_list') }}" class="btn more center">Все отзывы</a></p>
     </div>
+    <p class="center"><a href="{{ url('app_reviews_list') }}" class="btn more">Все отзывы</a></p>
 </div>

@@ -58,6 +58,14 @@
                 <source>list.label_id</source>
                 <target>ID</target>
             </trans-unit>
+            <trans-unit id="breadcrumb.link_urgent_sale_delete">
+                <source>breadcrumb.link_urgent_sale_delete</source>
+                <target>Удаление срочной продажи</target>
+            </trans-unit>
+            <trans-unit id="list.label__action">
+                <source>list.label__action</source>
+                <target>Действие</target>
+            </trans-unit>
             <trans-unit id="urgent sale">
                 <source>urgent sale</source>
                 <target>Срочная продажа</target>
