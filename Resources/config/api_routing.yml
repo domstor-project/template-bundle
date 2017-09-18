@@ -1,11 +1,5 @@
-#template_api:
-#    type:     rest
-#    resource: Domstor\TemplateBundle\Controller\ApiController
-#    name_prefix:  template_api_
-#    expose: true    
-    
 template_api_email_request:
-    pattern:  /requests/email
+    path:  /requests/email
     defaults: { _controller: DomstorTemplateBundle:Api:postEmailRequest }
     options:
         expose: true

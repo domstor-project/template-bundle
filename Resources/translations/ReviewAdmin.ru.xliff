@@ -34,6 +34,14 @@
                 <source>list.label_id</source>
                 <target>ID</target>
             </trans-unit>
+            <trans-unit id="list.label__action">
+                <source>list.label__action</source>
+                <target>Действие</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_review_delete">
+                <source>breadcrumb.link_review_delete</source>
+                <target>Удаление отзыва</target>
+            </trans-unit>
             <trans-unit id="review">
                 <source>review</source>
                 <target>Отзывы</target>

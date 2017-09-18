@@ -62,14 +62,18 @@
                 <source>list.label_image</source>
                 <target>Фото</target>
             </trans-unit>
+            <trans-unit id="list.label__action">
+                <source>list.label__action</source>
+                <target>Действие</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.link_employee_delete">
+                <source>breadcrumb.link_employee_delete</source>
+                <target>Удаление сотрудника</target>
+            </trans-unit>
             <trans-unit id="employee">
                 <source>employee</source>
                 <target>Сотрудники</target>
             </trans-unit>            
-            <trans-unit id="domstor_template">
-                <source>domstor_template</source>
-                <target>Портал</target>
-            </trans-unit>
         </body>
     </file>
 </xliff>

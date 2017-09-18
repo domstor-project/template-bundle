@@ -43,6 +43,12 @@ class SpecialOfferAdmin extends AbstractAdmin
     protected function configureListFields(ListMapper $list)
     {
         $list
+            ->add('_action', null, array(
+                'actions' => array(
+                    'edit' => array(),
+                    'delete' => array(),
+                )
+            ))
             ->addIdentifier('id')
             ->add('sorting', null, [
                 'editable' => true
