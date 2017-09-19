@@ -42,4 +42,6 @@ services:
 #        class: Domstor\TemplateBundle\EventDispatcher\EventListener\AdminFomSortingListener
 #        tags:
 #            - { name: kernel.event_listener, event: 'sonata.admin.event.configure.form', method: onFomConfigureEvent,  priority: 0 }
+    domstor.template.domstorlib.domstor_builder:
+        class: Domstor_Builder
     

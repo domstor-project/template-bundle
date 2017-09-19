@@ -29,7 +29,7 @@ class Configuration implements ConfigurationInterface
                 ->children()
                     ->arrayNode('domstorlib')
                         ->children()
-                            ->arrayNode('realtyicons')
+                            ->arrayNode('builder')
                                 ->children()
                                     ->integerNode('org_id')->isRequired()->end()
                                     ->integerNode('location_id')->isRequired()->end()

@@ -27,9 +27,16 @@ class RealtyIconsBlock extends AbstractBlockService
 {    
     protected $parameters = [];
     
-    public function __construct($name, EngineInterface $templating, array $parameters)
+    /**
+     *
+     * @var Domstor_Builder 
+     */
+    protected $builder;
+
+    public function __construct($name, EngineInterface $templating, Domstor_Builder $builder, array $parameters)
     {
         parent::__construct($name, $templating);
+        $this->builder = $builder;
         $this->parameters = $parameters;
     }
 
@@ -55,8 +62,7 @@ class RealtyIconsBlock extends AbstractBlockService
     public function execute(BlockContextInterface $blockContext, Response $response = null)
     {
         $block = $blockContext->getBlock();
-        $builder = new Domstor_Builder();
-        $domstor = $builder->build([
+        $domstor = $this->builder->build([
             'org_id' =>$block->getSetting('org_id'),
             'location_id' => $block->getSetting('location_id'),
             'cache' => [
