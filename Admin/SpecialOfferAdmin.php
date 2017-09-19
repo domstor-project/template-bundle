@@ -13,8 +13,6 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Form\Type\ModelListType;
-use Symfony\Component\Form\Extension\Core\Type\NumberType;
-use Symfony\Component\Form\Extension\Core\Type\UrlType;
 
 /**
  * Description of SpecialOfferAdmin
@@ -35,7 +33,7 @@ class SpecialOfferAdmin extends AbstractAdmin
             ->add('text')
             ->add('address')
             ->add('price')
-            ->add('link', UrlType::class)
+            ->add('link')
             ->add('sorting')
         ;
     }
@@ -56,7 +54,7 @@ class SpecialOfferAdmin extends AbstractAdmin
             ->add('image')
             ->add('address')
             ->add('price')
-            ->add('link', 'url')
+            ->add('link')
         ;
     }
     
