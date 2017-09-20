@@ -41,6 +41,7 @@ class BasePostRepository extends EntityRepository implements BlockContentProvide
             ->leftJoin('p.image', 'image')
             ->where('p.enabled = 1')
             ->orderBy('p.publicationDateStart', 'desc')
+            ->setMaxResults($options['count'])
         ;
         return $qb->getQuery()->getResult();
     }

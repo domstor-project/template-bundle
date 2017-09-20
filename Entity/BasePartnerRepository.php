@@ -25,6 +25,7 @@ abstract class BasePartnerRepository extends EntityRepository implements BlockCo
             ->addSelect('image')
             ->leftJoin('p.image', 'image')
             ->orderBy('p.sorting', 'asc')
+            ->setMaxResults($options['count'])
         ;
         return $qb->getQuery()->getResult();
     }

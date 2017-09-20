@@ -25,6 +25,7 @@ class BaseSliderRepository extends EntityRepository implements BlockContentProvi
             ->addSelect('image')
             ->leftJoin('s.image', 'image')
             ->orderBy('s.sorting', 'asc')
+            ->setMaxResults($options['count'])
         ;
         return $qb->getQuery()->getResult();
     }

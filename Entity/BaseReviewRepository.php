@@ -38,6 +38,7 @@ abstract class BaseReviewRepository extends EntityRepository implements BlockCon
         $qb = $this->createQueryBuilder('r');
         $qb
             ->orderBy('r.reviewDate', 'desc')
+            ->setMaxResults($options['count'])
         ;
         return $qb->getQuery()->getResult();
     }

@@ -25,6 +25,7 @@ abstract class BaseEmployeeRepository extends EntityRepository implements BlockC
             ->addSelect('image')
             ->leftJoin('emp.image', 'image')
             ->orderBy('emp.sorting', 'asc')
+            ->setMaxResults($options['count'])
         ;
         return $qb->getQuery()->getResult();
     }

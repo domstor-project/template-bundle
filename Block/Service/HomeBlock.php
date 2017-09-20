@@ -34,7 +34,7 @@ class HomeBlock extends AbstractBlockService
         $resolver
             ->setRequired(['template'])
             ->setDefaults([
-                'count'=>50
+                'count'=>100
             ])
         ;
         if ($this->defaultTemplate!==null)
