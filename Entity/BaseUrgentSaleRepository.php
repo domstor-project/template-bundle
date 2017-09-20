@@ -38,6 +38,7 @@ abstract class BaseUrgentSaleRepository extends EntityRepository implements Bloc
         $qb = $this->createQueryBuilder('s');
         $qb
             ->orderBy('s.sorting', 'asc')
+            ->setMaxResults($options['count'])
         ;
         return $qb->getQuery()->getResult();
     }

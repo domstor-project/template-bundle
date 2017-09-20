@@ -25,6 +25,7 @@ abstract class BaseSpecialOfferRepository extends EntityRepository implements Bl
             ->addSelect('image')
             ->leftJoin('s.image', 'image')
             ->orderBy('s.sorting', 'asc')
+            ->setMaxResults($options['count'])
         ;
         return $qb->getQuery()->getResult();
     }

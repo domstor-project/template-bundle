@@ -38,6 +38,7 @@ class BaseVacancyRepository extends EntityRepository implements BlockContentProv
         $qb = $this->createQueryBuilder('s');
         $qb
             ->orderBy('s.sorting', 'asc')
+            ->setMaxResults($options['count'])
         ;
         return $qb->getQuery()->getResult();
     }
