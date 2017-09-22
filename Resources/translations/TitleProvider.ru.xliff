@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="ru" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="flat.sale.title">
+                <source>flat.sale.title</source>
+                <target>Продажа квартир в %s</target>
+            </trans-unit>           
+            <trans-unit id="flat.rent.title">
+                <source>flat.rent.title</source>
+                <target>Аренда квартир в %s</target>
+            </trans-unit>           
+            <trans-unit id="flat.purchase.title">
+                <source>flat.purchase.title</source>
+                <target>Покупка квартир в %s</target>
+            </trans-unit>           
+            <trans-unit id="flat.rentuse.title">
+                <source>flat.rentuse.title</source>
+                <target>Заявки на аренду квартир в %s</target>
+            </trans-unit>           
+            <trans-unit id="flat.exchange.title">
+                <source>flat.exchange.title</source>
+                <target>Обмен квартир в %s</target>
+            </trans-unit>           
+            <trans-unit id="flat.new.title">
+                <source>flat.new.title</source>
+                <target>Новостройки в %s</target>
+            </trans-unit>           
+            <trans-unit id="house.sale.title">
+                <source>house.sale.title</source>
+                <target>Продажа домов в %s</target>
+            </trans-unit>           
+            <trans-unit id="house.rent.title">
+                <source>house.rent.title</source>
+                <target>Аренда домов в %s</target>
+            </trans-unit>
+            <trans-unit id="house.purchase.title">
+                <source>house.purchase.title</source>
+                <target>Покупка домов в %s</target>
+            </trans-unit>
+            <trans-unit id="house.rentuse.title">
+                <source>house.rentuse.title</source>
+                <target>Заявки на аренду домов в %s</target>
+            </trans-unit>
+            <trans-unit id="house.exchange.title">
+                <source>house.exchange.title</source>
+                <target>Обмен домов в %s</target>
+            </trans-unit>
+            <trans-unit id="garage.sale.title">
+                <source>garage.sale.title</source>
+                <target>Продажа гаражей в %s</target>
+            </trans-unit>
+            <trans-unit id="garage.rent.title">
+                <source>garage.rent.title</source>
+                <target>Аренда гаражей в %s</target>
+            </trans-unit>
+            <trans-unit id="garage.purchase.title">
+                <source>garage.purchase.title</source>
+                <target>Покупка гаражей в %s</target>
+            </trans-unit>
+            <trans-unit id="garage.rentuse.title">
+                <source>garage.rentuse.title</source>
+                <target>Заявки на аренду гаражей в %s</target>
+            </trans-unit>
+            <trans-unit id="land.sale.title">
+                <source>land.sale.title</source>
+                <target>Продажа земли и дач в %s</target>
+            </trans-unit>
+            <trans-unit id="land.rent.title">
+                <source>land.rent.title</source>
+                <target>Аренда земли и дач в %s</target>
+            </trans-unit>
+            <trans-unit id="land.purchase.title">
+                <source>land.purchase.title</source>
+                <target>Покупка земли и дач в %s</target>
+            </trans-unit>
+            <trans-unit id="land.rentuse.title">
+                <source>land.rentuse.title</source>
+                <target>Заявки на аренду земли и дач в %s</target>
+            </trans-unit>
+            <trans-unit id="trade.sale.title">
+                <source>trade.sale.title</source>
+                <target>Продажа торговых помещений в %s</target>
+            </trans-unit>
+            <trans-unit id="trade.rent.title">
+                <source>trade.rent.title</source>
+                <target>Аренда торговых помещений в %s</target>
+            </trans-unit>
+            <trans-unit id="trade.purchase.title">
+                <source>trade.purchase.title</source>
+                <target>Покупка торговых помещений в %s</target>
+            </trans-unit>
+            <trans-unit id="trade.rentuse.title">
+                <source>trade.rentuse.title</source>
+                <target>Заявки на аренду торговых помещений в %s</target>
+            </trans-unit>
+            <trans-unit id="office.sale.title">
+                <source>office.sale.title</source>
+                <target>Продажа офисных помещений в %s</target>
+            </trans-unit>
+            <trans-unit id="office.rent.title">
+                <source>office.rent.title</source>
+                <target>Аренда офисных помещений в %s</target>
+            </trans-unit>
+            <trans-unit id="office.purchase.title">
+                <source>office.purchase.title</source>
+                <target>Покупка офисных помещений в %s</target>
+            </trans-unit>
+            <trans-unit id="office.rentuse.title">
+                <source>office.rentuse.title</source>
+                <target>Заявки на аренду офисных помещений в %s</target>
+            </trans-unit>
+            <trans-unit id="product.sale.title">
+                <source>product.sale.title</source>
+                <target>Продажа производственных помещений в %s</target>
+            </trans-unit>
+            <trans-unit id="product.rent.title">
+                <source>product.rent.title</source>
+                <target>Аренда производственных помещений в %s</target>
+            </trans-unit>
+            <trans-unit id="product.purchase.title">
+                <source>product.purchase.title</source>
+                <target>Покупка производственных помещений в %s</target>
+            </trans-unit>
+            <trans-unit id="product.rentuse.title">
+                <source>product.rentuse.title</source>
+                <target>Заявки на аренду производственных помещений в %s</target>
+            </trans-unit>
+            <trans-unit id="storehouse.sale.title">
+                <source>storehouse.sale.title</source>
+                <target>Продажа складских помещений в %s</target>
+            </trans-unit>
+            <trans-unit id="storehouse.rent.title">
+                <source>storehouse.rent.title</source>
+                <target>Аренда складских помещений в %s</target>
+            </trans-unit>
+            <trans-unit id="storehouse.purchase.title">
+                <source>storehouse.purchase.title</source>
+                <target>Покупка складских помещений в %s</target>
+            </trans-unit>
+            <trans-unit id="storehouse.rentuse.title">
+                <source>storehouse.rentuse.title</source>
+                <target>Заявки на аренду складских помещений в %s</target>
+            </trans-unit>
+            <trans-unit id="landcom.sale.title">
+                <source>landcom.sale.title</source>
+                <target>Продажа коммерческой земли в %s</target>
+            </trans-unit>
+            <trans-unit id="landcom.rent.title">
+                <source>landcom.rent.title</source>
+                <target>Аренда коммерческой земли в %s</target>
+            </trans-unit>
+            <trans-unit id="landcom.purchase.title">
+                <source>landcom.purchase.title</source>
+                <target>Покупка коммерческой земли в %s</target>
+            </trans-unit>
+            <trans-unit id="landcom.rentuse.title">
+                <source>landcom.rentuse.title</source>
+                <target>Заявки на аренду коммерческой земли в %s</target>
+            </trans-unit>
+            <trans-unit id="complex.sale.title">
+                <source>complex.sale.title</source>
+                <target>Продажа имущественных комплексов в %s</target>
+            </trans-unit>
+            <trans-unit id="complex.rent.title">
+                <source>complex.rent.title</source>
+                <target>Аренда имущественных комплексов в %s</target>
+            </trans-unit>
+            <trans-unit id="other.sale.title">
+                <source>other.sale.title</source>
+                <target>Продажа нежилых помещений в %s</target>
+            </trans-unit>
+            <trans-unit id="other.rent.title">
+                <source>other.rent.title</source>
+                <target>Аренда нежилых помещений в %s</target>
+            </trans-unit>
+            <trans-unit id="other.purchase.title">
+                <source>other.purchase.title</source>
+                <target>Покупка нежилых помещений в %s</target>
+            </trans-unit>
+            <trans-unit id="other.rentuse.title">
+                <source>other.rentuse.title</source>
+                <target>Заявки на аренду нежилых помещений в %s</target>
+            </trans-unit>
+            <trans-unit id="commerce.sale.title">
+                <source>commerce.sale.title</source>
+                <target>Продажа коммерческой недвижимости в %s</target>
+            </trans-unit>
+            <trans-unit id="commerce.rent.title">
+                <source>commerce.rent.title</source>
+                <target>Аренда коммерческой недвижимости в %s</target>
+            </trans-unit>
+            <trans-unit id="commerce.purchase.title">
+                <source>commerce.purchase.title</source>
+                <target>Покупка коммерческой недвижимости в %s</target>
+            </trans-unit>
+            <trans-unit id="commerce.rentuse.title">
+                <source>commerce.rentuse.title</source>
+                <target>Заявки на аренду коммерческой недвижимости в %s</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

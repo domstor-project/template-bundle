@@ -94,5 +94,19 @@ services:
             - '@templating'
             - '@domstor.template.domstorlib.domstor_builder'
             - []
+            - '@file_locator'
+            - '@domstor.template.provider.title'
+        tags:
+            - { name: sonata.block }
+            
+    domstor.template.block.domstor_filter.service:
+        class: '%domstor.template.block.domstor_filter.class%'
+        arguments:
+            - domstor.template.block.domstor_block.service
+            - '@templating'
+            - '@domstor.template.domstorlib.domstor_builder'
+            - []
+            - '@router'
+            - '@file_locator'
         tags:
             - { name: sonata.block }
