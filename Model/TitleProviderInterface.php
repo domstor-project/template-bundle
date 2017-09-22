@@ -16,7 +16,9 @@ interface TitleProviderInterface
 {
     public function getType($object);
     
+    public function getTypeHtml($object);
+    
     public function getAction($action);
     
-    public function getListTitle($object, $action);
+    public function getListTitle($object, $action, $locName);
 }

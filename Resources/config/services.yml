@@ -36,7 +36,11 @@ parameters:
     
     domstor.template.block.realtyicons.class: Domstor\TemplateBundle\Block\Service\RealtyIconsBlock
     domstor.template.block.realtyicons.template: 'DomstorTemplateBundle:Block:realtyicons.html.twig'
-
+    
+    domstor.template.block.domstor_filter.class: Domstor\TemplateBundle\Block\Service\DomstorFilterBlock
+    domstor.template.block.domstor_filter.template: 'DomstorTemplateBundle:Block:domstor_filter.html.twig'
+    
+    domstor.template.provider.title.class: 'Domstor\TemplateBundle\Model\TitleProvider'
 services:
 #    domstor.template.admin.form_sorting_listener:
 #        class: Domstor\TemplateBundle\EventDispatcher\EventListener\AdminFomSortingListener
@@ -44,4 +48,12 @@ services:
 #            - { name: kernel.event_listener, event: 'sonata.admin.event.configure.form', method: onFomConfigureEvent,  priority: 0 }
     domstor.template.domstorlib.domstor_builder:
         class: Domstor_Builder
+        
+    domstor.template.provider.title:
+        class: '%domstor.template.provider.title.class%'
+        arguments:
+            - []
+            - []
+            - []
+            - '@translator'
     

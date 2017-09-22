@@ -33,7 +33,11 @@ class DomstorTemplateExtension extends Extension
         
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
+        
         $def = $container->getDefinition('domstor.template.block.realtyicons.service');
+        $def->replaceArgument(3, $config['domstorlib']['builder']);
+        
+        $def = $container->getDefinition('domstor.template.block.domstor_filter.service');
         $def->replaceArgument(3, $config['domstorlib']['builder']);
         
         $container->setParameter('domstor.template.domstorlib.domstor_parameters', $config['domstorlib']['builder']);
@@ -42,6 +46,11 @@ class DomstorTemplateExtension extends Extension
         $container->setParameter('domstor.template.mailer.request.from', $config['mailer']['request']['from']);
         $container->setParameter('domstor.template.mailer.request.subject', $config['mailer']['request']['subject']);
         $container->setParameter('domstor.template.mailer.request.email_template', $config['mailer']['request']['email_template']);
+        
+        $def = $container->getDefinition('domstor.template.provider.title');
+        $def->replaceArgument(0, $config['title']['objects']);
+        $def->replaceArgument(1, $config['title']['objectsHtml']);
+        $def->replaceArgument(2, $config['title']['actions']);
         
     }
 }
