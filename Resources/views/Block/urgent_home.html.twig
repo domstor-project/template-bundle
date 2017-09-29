@@ -1,7 +1,7 @@
 <div class="urgent_home">
     <div class="urgent_sale">
-        <h3>Срочная продажа</h3>
-        <a id="urgent_prev" class="jcarousel_urgent-prev" href="#" data-target="#" title="Предыдущее предложение"></a><a id="urgent_next" class="jcarousel_urgent-next" href="#" data-target="#" title="Следующее предложение"></a>
+        <h3>{{ 'block.home.urgent.list.title'|trans({},'Block') }}</h3>
+        <a id="urgent_prev" class="jcarousel_urgent-prev" href="#" data-target="#" title="{{ 'block.home.urgent.carousel.previous.title'|trans({},'Block') }}"></a><a id="urgent_next" class="jcarousel_urgent-next" href="#" data-target="#" title="{{ 'block.home.urgent.carousel.next.title'|trans({},'Block') }}"></a>
         <div class="jcarousel_urgent">
             <div id="urgent" class="owl-carousel">
                 {% for row in rows %}
@@ -10,7 +10,7 @@
                     <p><strong>{{ row.address }}</strong></p>
                     <p><strong>{{ row.price|raw }}</strong></p>
                     <p><strong>{{ row.phone }}</strong></p>
-                    <a class="urgent_link" href="{{ row.link }}" title="Перейти на страницу объекта"></a>
+                    <a class="urgent_link" href="{{ row.link }}" title="{{ 'block.home.urgent.show.title'|trans({},'Block') }}"></a>
                 </div>
                 {% endfor %}
             </div>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+    <file source-language="ru" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="block.home.employee.title">
+                <source>block.home.employee.title</source>
+                <target>Наши сотрудники</target>
+            </trans-unit>
+            <trans-unit id="block.home.employee.img.alt">
+                <source>block.home.employee.img.alt</source>
+                <target>Фото сотрудника</target>
+            </trans-unit>
+            <trans-unit id="block.home.partner.title">
+                <source>block.home.partner.title</source>
+                <target>Наши партнёры</target>
+            </trans-unit>
+            <trans-unit id="block.home.partner.carousel.previous.title">
+                <source>block.home.partner.carousel.previous.title</source>
+                <target>Предыдущий партнер</target>
+            </trans-unit>
+            <trans-unit id="block.home.partner.carousel.next.title">
+                <source>block.home.partner.carousel.next.title</source>
+                <target>Следующий партнер</target>
+            </trans-unit>
+            <trans-unit id="block.home.post.title">
+                <source>block.home.post.title</source>
+                <target>Новости</target>
+            </trans-unit>
+            <trans-unit id="block.home.post.carousel.previous.title">
+                <source>block.home.post.carousel.previous.title</source>
+                <target>Предыдущая новость</target>
+            </trans-unit>
+            <trans-unit id="block.home.post.carousel.next.title">
+                <source>block.home.post.carousel.next.title</source>
+                <target>Следующая новость</target>
+            </trans-unit>
+            <trans-unit id="block.home.post.show.title">
+                <source>block.home.post.show.title</source>
+                <target>Смотреть новость полностью</target>
+            </trans-unit>
+            <trans-unit id="block.home.post.list.title">
+                <source>block.home.post.list.title</source>
+                <target>Все новости</target>
+            </trans-unit>
+            <trans-unit id="block.home.review.title">
+                <source>block.home.review.title</source>
+                <target>Отзывы</target>
+            </trans-unit>
+            <trans-unit id="block.home.review.carousel.previous.title">
+                <source>block.home.review.carousel.previous.title</source>
+                <target>Предыдущий отзыв</target>
+            </trans-unit>
+            <trans-unit id="block.home.review.carousel.next.title">
+                <source>block.home.review.carousel.next.title</source>
+                <target>Следующий отзыв</target>
+            </trans-unit>
+            <trans-unit id="block.home.review.show.title">
+                <source>block.home.review.show.title</source>
+                <target>Смотреть отзыв полностью</target>
+            </trans-unit>
+            <trans-unit id="block.home.review.list.title">
+                <source>block.home.review.list.title</source>
+                <target>Все отзывы</target>
+            </trans-unit>
+            <trans-unit id="block.home.special.title">
+                <source>block.home.special.title</source>
+                <target>Специальные предложения</target>
+            </trans-unit>
+            <trans-unit id="block.home.special.carousel.previous.title">
+                <source>block.home.special.carousel.previous.title</source>
+                <target>Предыдущее предложение</target>
+            </trans-unit>
+            <trans-unit id="block.home.special.carousel.next.title">
+                <source>block.home.special.carousel.next.title</source>
+                <target>Следующее предложение</target>
+            </trans-unit>
+            <trans-unit id="block.home.special.img.alt">
+                <source>block.home.special.img.alt</source>
+                <target>Фото объекта</target>
+            </trans-unit>
+            <trans-unit id="block.home.special.show.title">
+                <source>block.home.special.show.title</source>
+                <target>Перейти на страницу объекта</target>
+            </trans-unit>
+            <trans-unit id="block.home.urgent.list.title">
+                <source>block.home.urgent.list.title</source>
+                <target>Срочная продажа</target>
+            </trans-unit>
+            <trans-unit id="block.home.urgent.carousel.previous.title">
+                <source>block.home.urgent.carousel.previous.title</source>
+                <target>Предыдущее предложение</target>
+            </trans-unit>
+            <trans-unit id="block.home.urgent.carousel.next.title">
+                <source>block.home.special.carousel.next.title</source>
+                <target>Следующее предложение</target>
+            </trans-unit>
+            <trans-unit id="block.home.urgent.show.title">
+                <source>block.home.urgent.show.title</source>
+                <target>Перейти на страницу объекта</target>
+            </trans-unit>
+            <trans-unit id="block.home.vacancy.title">
+                <source>block.home.vacancy.title</source>
+                <target>Вакансии</target>
+            </trans-unit>
+            <trans-unit id="block.home.vacancy.carousel.previous.title">
+                <source>block.home.vacancy.carousel.previous.title</source>
+                <target>Предыдущая вакансия</target>
+            </trans-unit>
+            <trans-unit id="block.home.vacancy.carousel.next.title">
+                <source>block.home.vacancy.carousel.next.title</source>
+                <target>Следующая вакансия</target>
+            </trans-unit>
+            <trans-unit id="block.home.vacancy.show.title">
+                <source>block.home.vacancy.show.title</source>
+                <target>Перейти на страницу вакансии</target>
+            </trans-unit>
+            <trans-unit id="block.home.vacancy.list.title">
+                <source>block.home.vacancy.list.title</source>
+                <target>Все вакансии</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

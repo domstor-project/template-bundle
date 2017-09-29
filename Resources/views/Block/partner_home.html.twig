@@ -1,8 +1,8 @@
 <div class="partners_home">
     <div class="partners_content">
-        <h3>Наши партнёры</h3>
+        <h3>{{ 'block.home.partner.title'|trans({},'Block') }}</h3>
         <div class="partners_txt">
-            <a id="partners_prev" class="jcarousel_partners-prev" href="#" title="Предыдущий партнер"></a><a id="partners_next" class="jcarousel_partners-next" href="#" title="Следующий партнер"></a>
+            <a id="partners_prev" class="jcarousel_partners-prev" href="#" title="{{ 'block.home.partner.carousel.previous.title'|trans({},'Block') }}"></a><a id="partners_next" class="jcarousel_partners-next" href="#" title="{{ 'block.home.partner.carousel.next.title'|trans({},'Block') }}"></a>
             <div id="partners">
                 {% for row in rows %}
                     <div>

@@ -1,18 +1,18 @@
 <div class="special_home">
     <div class="special_content">
-        <h3>Специальные предложения</h3>
-        <a id="special_prev" class="jcarousel_special-prev" href="#" data-target="#" title="Предыдущее предложение"></a><a id="special_next" class="jcarousel_special-next" href="#" data-target="#" title="Следующее предложение"></a>
+        <h3>{{ 'block.home.special.title'|trans({},'Block') }}</h3>
+        <a id="special_prev" class="jcarousel_special-prev" href="#" data-target="#" title="{{ 'block.home.special.carousel.previous.title'|trans({},'Block') }}"></a><a id="special_next" class="jcarousel_special-next" href="#" data-target="#" title="{{ 'block.home.special.carousel.next.title'|trans({},'Block') }}"></a>
         <div class="jcarousel_special">
             <div id="special" class="owl-carousel">
                 {% for row in rows %}
                 <div class="special">
-                    <img src="{% if row.image %}{% path row.image, 'special_offer_home' %}{%endif%}" alt="Фото объекта" />
+                    <img src="{% if row.image %}{% path row.image, 'special_offer_home' %}{%endif%}" alt="{{ 'block.home.special.img.alt'|trans({},'Block') }}" />
                     <div class="special_txt">
                         <p>{{ row.text }}</p>
                         <p><strong>{{ row.address }}</strong></p>
                         <p><strong>{{ row.price|raw }}</strong></p>
                     </div>
-                    <a href="{{ row.link }}" title="Перейти на страницу объекта"></a>
+                    <a href="{{ row.link }}" title="{{ 'block.home.special.show.title'|trans({},'Block') }}"></a>
                 </div>
                 {% endfor %}
             </div>

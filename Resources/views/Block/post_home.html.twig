@@ -1,17 +1,17 @@
 <div class="news_home">
     <div class="news_content">
-        {% block headnews %}<h3>Новости</h3>{% endblock %}
-        <a id="news_prev" class="jcarousel_news-prev" href="#" data-target="#" title="Предыдущая новость"></a><a id="news_next" class="jcarousel_news-next" href="#" data-target="#" title="Следующая новость"></a>
+        {% block headnews %}<h3>{{ 'block.home.post.title'|trans({},'Block') }}</h3>{% endblock %}
+        <a id="news_prev" class="jcarousel_news-prev" href="#" data-target="#" title="{{ 'block.home.post.carousel.previous.title'|trans({},'Block') }}"></a><a id="news_next" class="jcarousel_news-next" href="#" data-target="#" title="{{ 'block.home.post.carousel.next.title'|trans({},'Block') }}"></a>
         <div class="jcarousel_news">
             <div id="news" class="owl-carousel">
                 {% for row in rows %}
                     <div class="news_block"><!-- Блок новости -->
-                        <p><a href="{{ path('app_news_show', {post: row.id}) }}" title="Смотреть новость полностью">{{ row.title|length > 127 ? row.title|slice(0, 127) ~ '...' : row.title }}</a></p>
+                        <p><a href="{{ path('app_news_show', {post: row.id}) }}" title="{{ 'block.home.post.show.title'|trans({},'Block') }}">{{ row.title|length > 127 ? row.title|slice(0, 127) ~ '...' : row.title }}</a></p>
                         <p class="data">{{ row.publicationDateStart|date('d.m.Y') }}</p>
                     </div>
                 {% endfor %} 
             </div>
         </div>
     </div>
-    <p class="archive_news"><a href="{{ url('app_news_list') }}" class="btn more">Все новости</a></p>
+    <p class="archive_news"><a href="{{ url('app_news_list') }}" class="btn more">{{ 'block.home.post.list.title'|trans({},'Block') }}</a></p>
 </div>
