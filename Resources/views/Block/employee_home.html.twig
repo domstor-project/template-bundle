@@ -1,9 +1,9 @@
 {% extends "DomstorTemplateBundle:Block:base_carousel_home.html.twig" %}
 {% set template_name = 'collective' %}
-{% block template_title %}Наши сотрудники{% endblock %}
+{% block template_title %}{{ 'block.home.employee.title'|trans({},'Block') }}{% endblock %}
 {% block row_content %}
     {% if row.image %}
-        <img src="{% path row.image, 'employee_home' %}" alt="Фото сотрудника" />
+        <img src="{% path row.image, 'employee_home' %}" alt="{{ 'block.home.employee.img.alt'|trans({},'Block') }}" />
     {% endif %}
     <div class="{{template_name}}_txt">
         <p><strong>{{ row.name }}</strong></p>

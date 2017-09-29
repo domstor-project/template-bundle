@@ -1,7 +1,7 @@
 <div class="vacancy_home">
     <div class="vacancy_content">
-        <h3>Вакансии</h3>
-        <a id="vacancy_prev" class="jcarousel_vacancy-prev" href="#" data-target="#" title="Предыдущая вакансия"></a><a id="vacancy_next" class="jcarousel_vacancy-next" href="#" data-target="#" title="Следующая вакансия"></a>
+        <h3>{{ 'block.home.vacancy.title'|trans({},'Block') }}</h3>
+        <a id="vacancy_prev" class="jcarousel_vacancy-prev" href="#" data-target="#" title="{{ 'block.home.vacancy.carousel.previous.title'|trans({},'Block') }}"></a><a id="vacancy_next" class="jcarousel_vacancy-next" href="#" data-target="#" title="{{ 'block.home.vacancy.carousel.next.title'|trans({},'Block') }}"></a>
         <div class="jcarousel_vacancy">
             <div id="vacancy" class="owl-carousel">
                 {% for row in rows %}
@@ -10,11 +10,11 @@
                     <p>{{ row.place }}</p>
                     <p><strong>{{ row.salary|raw}}</strong></p>
                     <p><strong>{{ row.phone }}</strong></p>
-                    <a class="vacancy_link" href="{{ path('app_vacancies_show', {'vacancy': row.id}) }}" title="Перейти на страницу вакансии"></a>
+                    <a class="vacancy_link" href="{{ path('app_vacancies_show', {'vacancy': row.id}) }}" title="{{ 'block.home.vacancy.show.title'|trans({},'Block') }}"></a>
                 </div>
                 {% endfor %}
             </div>
         </div>
     </div>
-    <p class="center"><a href="{{ url('app_vacancies_list') }}" class="btn more">Все вакансии</a></p>
+    <p class="center"><a href="{{ url('app_vacancies_list') }}" class="btn more">{{ 'block.home.vacancy.list.title'|trans({},'Block') }}</a></p>
 </div>
