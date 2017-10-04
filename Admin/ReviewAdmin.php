@@ -14,6 +14,7 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Sonata\CoreBundle\Form\Type\DatePickerType;
+use \IntlDateFormatter;
 
 /**
  * Description of ReviewAdmin
@@ -25,7 +26,9 @@ class ReviewAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $form)
     {
         $form            
-            ->add('reviewDate', DatePickerType::class)
+            ->add('reviewDate', DatePickerType::class, [
+                'format'=>IntlDateFormatter::TRADITIONAL
+            ])
             ->add('author')
             ->add('text', TextareaType::class, ['attr' => ['size' => '3000', 'rows'=>20]])
         ;

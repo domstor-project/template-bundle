@@ -17,6 +17,7 @@ use Domstor\TemplateBundle\Model\PostInterface;
 use Sonata\FormatterBundle\Form\Type\FormatterType;
 use Sonata\AdminBundle\Form\Type\ModelListType;
 use Sonata\CoreBundle\Form\Type\DatePickerType;
+use \IntlDateFormatter;
 
 /**
  * Description of PostAdmin
@@ -94,7 +95,9 @@ class PostAdmin extends AbstractAdmin
                     'class' => 'col-md-4',
                 ))
                 ->add('enabled', null, array('required' => false))
-                ->add('publicationDateStart', DatePickerType::class)
+                ->add('publicationDateStart', DatePickerType::class, [
+                    'format'=>IntlDateFormatter::TRADITIONAL
+                ])
             ->end()
         ;
     }
