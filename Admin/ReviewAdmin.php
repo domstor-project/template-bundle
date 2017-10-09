@@ -26,9 +26,7 @@ class ReviewAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $form)
     {
         $form            
-            ->add('reviewDate', DatePickerType::class, [
-                'format'=>IntlDateFormatter::TRADITIONAL
-            ])
+            ->add('reviewDate', DatePickerType::class)
             ->add('author')
             ->add('text', TextareaType::class, ['attr' => ['size' => '3000', 'rows'=>20]])
         ;
