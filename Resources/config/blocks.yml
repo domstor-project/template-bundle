@@ -102,7 +102,7 @@ services:
     domstor.template.block.domstor_filter.service:
         class: '%domstor.template.block.domstor_filter.class%'
         arguments:
-            - domstor.template.block.domstor_block.service
+            - domstor.template.block.domstor_filter.service
             - '@templating'
             - '@domstor.template.domstorlib.domstor_builder'
             - []
