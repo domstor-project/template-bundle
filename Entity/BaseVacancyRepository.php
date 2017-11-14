@@ -20,7 +20,7 @@ use Knp\Bundle\PaginatorBundle\Definition\PaginatorAwareInterface;
  *
  * @author Dmitry Anikeev <anikeev.dmitry@outlook.com>
  */
-class BaseVacancyRepository extends EntityRepository implements BlockContentProviderInterface, VacancyProviderInterface, PaginatorAwareInterface
+abstract class BaseVacancyRepository extends EntityRepository implements BlockContentProviderInterface, VacancyProviderInterface, PaginatorAwareInterface
 {
     /**
      *

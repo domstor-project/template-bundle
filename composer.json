@@ -42,5 +42,5 @@
     "require-dev": {
         "doctrine/orm": "^2.5"
     },
-    "version": "dev-local"
+    "minimum-stability": "stable"
 }

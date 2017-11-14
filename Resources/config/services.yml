@@ -39,6 +39,8 @@ parameters:
     
     domstor.template.block.domstor_filter.class: Domstor\TemplateBundle\Block\Service\DomstorFilterBlock
     domstor.template.block.domstor_filter.template: 'DomstorTemplateBundle:Block:domstor_filter.html.twig'
+
+    domstor.template.block.switch_location.class: Domstor\TemplateBundle\Block\Service\SwitchLocationBlock
     
     domstor.template.provider.title.class: 'Domstor\TemplateBundle\Model\TitleProvider'
 services:

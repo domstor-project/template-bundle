@@ -110,3 +110,13 @@ services:
             - '@file_locator'
         tags:
             - { name: sonata.block }
+
+    domstor.template.block.switch_location.service:
+        class: '%domstor.template.block.switch_location.class%'
+        arguments:
+            - domstor.template.block.domstor_filter.service
+            - '@templating'
+            - []
+            - '@file_locator'
+        tags:
+            - { name: sonata.block }
