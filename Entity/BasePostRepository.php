@@ -20,7 +20,7 @@ use PDO;
  *
  * @author Dmitry Anikeev <anikeev.dmitry@outlook.com>
  */
-class BasePostRepository extends EntityRepository implements BlockContentProviderInterface, PostProviderInterface, PaginatorAwareInterface
+abstract class BasePostRepository extends EntityRepository implements BlockContentProviderInterface, PostProviderInterface, PaginatorAwareInterface
 { 
     /**
      *

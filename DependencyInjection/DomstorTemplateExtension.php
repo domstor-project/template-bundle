@@ -39,6 +39,9 @@ class DomstorTemplateExtension extends Extension
         
         $def = $container->getDefinition('domstor.template.block.domstor_filter.service');
         $def->replaceArgument(3, $config['domstorlib']['builder']);
+
+        $def = $container->getDefinition('domstor.template.block.switch_location.service');
+        $def->replaceArgument(2, $config['domstorlib']['links']);
         
         $container->setParameter('domstor.template.domstorlib.domstor_parameters', $config['domstorlib']['builder']);
         $container->setParameter('domstor.template.mailer.request.service_name', 'swiftmailer.mailer.' . $config['mailer']['request']['service']);
@@ -46,6 +49,7 @@ class DomstorTemplateExtension extends Extension
         $container->setParameter('domstor.template.mailer.request.from', $config['mailer']['request']['from']);
         $container->setParameter('domstor.template.mailer.request.subject', $config['mailer']['request']['subject']);
         $container->setParameter('domstor.template.mailer.request.email_template', $config['mailer']['request']['email_template']);
+        $container->setParameter('domstor.template.domstorlib.links', $config['domstorlib']['links']);
         
         $def = $container->getDefinition('domstor.template.provider.title');
         $def->replaceArgument(0, $config['title']['objects']);

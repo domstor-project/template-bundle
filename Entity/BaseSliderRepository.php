@@ -16,7 +16,7 @@ use Domstor\TemplateBundle\Model\BlockContentProviderInterface;
  *
  * @author Dmitry Anikeev <anikeev.dmitry@outlook.com>
  */
-class BaseSliderRepository extends EntityRepository implements BlockContentProviderInterface
+abstract class BaseSliderRepository extends EntityRepository implements BlockContentProviderInterface
 {
     public function findForHomePage($options)
     {

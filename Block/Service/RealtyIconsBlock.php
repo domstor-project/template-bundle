@@ -30,19 +30,19 @@ class RealtyIconsBlock extends AbstractBlockService
 
     /**
      *
-     * @var Domstor_Builder 
+     * @var Domstor_Builder
      */
     protected $builder;
-    
+
     /**
      *
-     * @var FileLocator 
+     * @var FileLocator
      */
     protected $locator;
-    
+
     /**
      *
-     * @var TitleProvider 
+     * @var TitleProvider
      */
     protected $provider;
 
@@ -58,31 +58,24 @@ class RealtyIconsBlock extends AbstractBlockService
     public function configureSettings(OptionsResolver $resolver)
     {
         $resolver
-                ->setDefaults([
-                    'org_id' => null,
-                    'location_id' => null,
-                    'template' => 'DomstorTemplateBundle:Block:realtyicons.html.twig',
-                    'cache_time' => null,
-                    'cache_type' => null,
-                    'cache_dir' => null
-                ])
+            ->setDefaults([
+                'template' => 'DomstorTemplateBundle:Block:realtyicons.html.twig',
+                'builder_location_id' => null
+            ])
+            ->setAllowedTypes('builder_location_id', ['null','string'])
         ;
     }
 
     public function execute(BlockContextInterface $blockContext, Response $response = null)
     {
-        $contextSettings = $blockContext->getSettings();
-        $cacheDir = $this->locator->locate($contextSettings['cache_dir'] ? $contextSettings['cache_dir'] : $this->parameters['cache_dir']);
-        $domstor = $this->builder->build([
-            'org_id' => $contextSettings['org_id'] ? $contextSettings['org_id'] : $this->parameters['org_id'],
-            'location_id' => $contextSettings['location_id'] ? $contextSettings['location_id'] : $this->parameters['location_id'],
-            'cache' => [
-                'type' => $contextSettings['cache_type'] ? $contextSettings['cache_type'] : $this->parameters['cache_type'],
-                'time' => $contextSettings['cache_time'] ? $contextSettings['cache_time'] : $this->parameters['cache_time'],
-                'uniq_key' => $contextSettings['org_id'] ? (string) $contextSettings['org_id'] : (string) $this->parameters['org_id'],
-                'options' => ['directory' => $cacheDir],
-            ],
-        ]);
+        $location_id = $blockContext->getSetting('builder_location_id');
+        $contextSettings = $this->parameters;
+        if ($location_id!==null && is_numeric($location_id))
+        {
+            $contextSettings['location_id'] = (int)$location_id;
+        }
+
+        $domstor = $this->builder->build($contextSettings);
 
         $countsLiv = $domstor->getAllCounts(['commerce' => false]);
 

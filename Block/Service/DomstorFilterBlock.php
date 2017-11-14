@@ -61,32 +61,33 @@ class DomstorFilterBlock extends AbstractBlockService
                 ])
                 ->setDefaults([
                     'template' => 'DomstorTemplateBundle:Block:domstor_filter.html.twig',
+                    'builder_location_id' => null,
+                    'builder_filter_template_dir' => null,
                     'object' => 'flat',
                     'action' => 'sale',
                     'form_action_route_placeholders' => '?page=%page%sort%filter',
-                    'filter_template_dir' => null
                 ])
+                ->setAllowedTypes('builder_filter_template_dir',['null', 'string'])
+                ->setAllowedTypes('builder_location_id',['null', 'string'])
         ;
     }
 
     public function execute(BlockContextInterface $blockContext, Response $response = null)
     {
-        $filterDir = $this->locator->locate($blockContext->getSetting('filter_template_dir') ? $blockContext->getSetting('filter_template_dir') : $this->builderParameters['filter_template_dir']);
-        $domstor = $this->builder->build([
-            'org_id' => $this->builderParameters['org_id'],
-            'location_id' => $this->builderParameters['location_id'],
-            'cache' => [
-                'type' => $this->builderParameters['cache_type'],
-                'time' => $this->builderParameters['cache_time'],
-                'uniq_key' => (string) $this->builderParameters['org_id'],
-                'options' => ['directory' => $this->locator->locate($this->builderParameters['cache_dir']),
-                ],
-                'filter' => [
-                    'template_dir' => $filterDir,
-                ]
-            ]
-        ]);
-        $filter = $domstor->createFilter($blockContext->getSetting('object'), $blockContext->getSetting('action'), ['filter_dir'=>$filterDir]);
+        $contextSettings = $this->builderParameters;
+        $templateDir = $blockContext->getSetting('builder_filter_template_dir');
+        if (null!==$templateDir)
+        {
+            $contextSettings['filter']['template_dir'] = $this->locator->locate($templateDir);
+        }
+        $location_id = $blockContext->getSetting('builder_location_id');
+        if ($location_id!==null && is_numeric($location_id))
+        {
+            $contextSettings['location_id'] = (int)$location_id;
+        }
+        $domstor = $this->builder->build($contextSettings);
+
+        $filter = $domstor->createFilter($blockContext->getSetting('object'), $blockContext->getSetting('action'));
         $filter->setAction($this->router->generate($blockContext->getSetting('form_action_route'), [
                     'object' => $blockContext->getSetting('object'),
                     'action' => $blockContext->getSetting('action'),
