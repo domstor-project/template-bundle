@@ -16,7 +16,7 @@
                     <a id="icon-{{ obj }}" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ tp.typehtml(obj)|raw }}</a>
                     <ul class="dropdown-menu" aria-labelledby="icon-{{ obj }}">
                     {% for act, count in actions %}
-                        <li><a href="{{ path('app_objects_list', {object: obj, action: act}) }}">{{ tp.action(act) }} ({{ count }})</a></li>
+                        <li><a href="{{ path('app_objects_list', {location: location_id,object: obj, action: act}) }}">{{ tp.action(act) }} ({{ count }})</a></li>
                     {% endfor %}
                     </ul>
                 </li><!--
@@ -28,7 +28,7 @@
                     <a id="icon-{{ obj }}" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Коммерческая<br>недвижимость</a>
                     <ul class="dropdown-menu" aria-labelledby="icon-{{ obj }}">
                     {% for act, count in actions %}
-                        <li><a href="{{ path('app_objects_list', {object: obj, action: act}) }}">{{ tp.action(act) }} ({{ count }})</a></li>
+                        <li><a href="{{ path('app_objects_list', {location: location_id, object: obj, action: act}) }}">{{ tp.action(act) }} ({{ count }})</a></li>
                     {% endfor %}
                     </ul>
                 </li><!--

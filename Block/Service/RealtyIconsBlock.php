@@ -95,6 +95,7 @@ class RealtyIconsBlock extends AbstractBlockService
                     'countsLiv' => $countsLiv,
                     'countsCom' => $countsCom,
                     'tp' => $this->provider,
+                    'location_id' => $contextSettings['location_id']
         ]);
     }
 
